@@ -423,7 +423,7 @@ a:hover {
 
   #hero {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 20rem 1rem;
   }
 
   #hero img {
@@ -491,5 +491,10 @@ a:hover {
   button {
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
+  }
+
+  #project{
+    justify-content: center;
+    align-items: center;
   }
 }
