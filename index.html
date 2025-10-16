@@ -85,10 +85,11 @@
         <h2>Newsletter</h2>
         <h3>Subscribe to My Updates</h3>
         <p>Get my latest projects, tutorials and news directly in your inbox</p>
-        <form name="subscribe" method="POST" data-netlify="true" action="/thanks.html">
-            <input type="name" placeholder="Enter your name" required>
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
+        <form name="newsletter" method="POST" data-netlify="true" action="thanks.html">
+        <input type="hidden" name="form-name" value="newsletter">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
         </form>
     </section>
 
