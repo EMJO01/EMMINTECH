@@ -1,0 +1,404 @@
+/*GLOBAL STYLES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0d1117;
+  color: #e6e6e6;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Accent colors */
+:root {
+  --primary: #007bff;
+  --secondary: #00c2ff;
+  --light-bg: #161b22;
+}
+
+/*HEADER*/
+header {
+  background: rgba(13, 17, 23, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e6e6e6;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--secondary);
+}
+
+/* HERO SECTION */
+#hero {
+  text-align: center;
+  padding: 8rem 2rem 5rem;
+  background: linear-gradient(135deg, #0a0f1a, #091a2c);
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+#hero h4 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+#hero .brand {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+#hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto;
+  display: block;
+  border: 3px solid var(--primary);
+}
+
+#hero button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#hero button:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+/* ABOUT */
+#about {
+  background: var(--light-bg);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#about h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+/* PROJECTS */
+#project {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#project h2 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+}
+
+.project-card h3 {
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.project-card img{
+  width: 300px;
+  height: 300px;
+  border-radius: 80%;
+  object-fit: cover;
+  margin: 1rem auto;
+  display: block;
+  border: 3px solid var(--primary);
+}
+
+/* SKILLS */
+#skills {
+  background: #0a0f1a;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#skills h2 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.skill-icons i {
+  font-size: 2rem;
+  margin: 0.7rem;
+  color: var(--secondary);
+  transition: 0.3s;
+}
+
+.skill-icons i:hover {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+/* HIRE ME */
+#hire-me {
+  background: var(--light-bg);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#hire-me button {
+  background: var(--secondary);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#hire-me button:hover {
+  background: var(--primary);
+  transform: scale(1.05);
+}
+
+/*  NEWSLETTER */
+#newsletter {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #091a2c;
+}
+
+#newsletter form {
+  margin-top: 1rem;
+}
+
+#newsletter input {
+  padding: 0.7rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#newsletter button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#newsletter button:hover {
+  background: var(--secondary);
+}
+
+/* CONTACT */
+#Contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: var(--light-bg);
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+  background: #0a0f1a;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer .brand {
+  color: var(--secondary);
+}
+
+.footer-tagline {
+  color: var(--primary);
+  margin-top: 0.3rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #020617; /* deep tech blue background */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+#work {
+  margin: 50px auto;
+  padding-top: 1090px;
+  max-width: 800px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.2);
+}
+
+#work img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Expanded image modal effect */
+.image-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 65%;
+  max-height: 80%;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.image-modal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 999;
+}
+
+.modal-overlay.active {
+  display: block;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
+
+.modal-overlay.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.image-modal.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-modal {
+  opacity: 0;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+
