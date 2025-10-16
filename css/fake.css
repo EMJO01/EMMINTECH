@@ -423,7 +423,7 @@ a:hover {
 
   #hero {
     text-align: center;
-    padding: 5rem 1rem;
+    padding: 8rem 1rem;
   }
 
   #hero img {
@@ -467,6 +467,11 @@ a:hover {
     font-size: 0.9rem;
     text-align: center;
   }
+
+  .project-card img{
+    width: 200px;
+    height: 200px;
+  }
 }
 
 /* Smaller phones */
@@ -496,5 +501,9 @@ a:hover {
   #project{
     justify-content: center;
     align-items: center;
+  }
+  .project-card img{
+    width: 250px;
+    height: 250px;
   }
 }
