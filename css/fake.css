@@ -401,4 +401,95 @@ a:hover {
   transform: scale(1.1);
 }
 
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  header h2.logo {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0;
+  }
+
+  #hero {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  #hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  #hero h1 {
+    font-size: 1.6rem;
+  }
+
+  #hero h4 {
+    font-size: 1rem;
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    width: 90%;
+    text-align: center;
+  }
+
+  .skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  #hero img {
+    width: 120px;
+    height: 120px;
+  }
+
+  header h2.logo {
+    font-size: 1.2rem;
+  }
+
+  #hero h1 {
+    font-size: 1.4rem;
+  }
+
+  #hero h4 {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
