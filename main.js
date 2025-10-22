@@ -1,69 +1,91 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Select all expandable images
+  // ========== IMAGE MODAL (ZOOM-IN FEATURE) ==========
   const expandable = document.querySelectorAll("img.expandable");
 
-  // If none found, still safe to run
   expandable.forEach(img => {
     img.style.cursor = "zoom-in";
     img.addEventListener("click", () => openImageModal(img));
   });
 
   function openImageModal(imgEl) {
-    // determine width based on page
-    const isWorkPage = window.location.pathname.includes("work.html") || document.title.toLowerCase().includes("my work");
+    const isWorkPage =
+      window.location.pathname.includes("work.html") ||
+      document.title.toLowerCase().includes("my work");
     const modalWidth = isWorkPage ? "90%" : "65%";
 
-    // create overlay
     const overlay = document.createElement("div");
     overlay.className = "modal-overlay";
 
-    // create modal
     const modal = document.createElement("div");
     modal.className = "image-modal";
     modal.style.width = modalWidth;
 
-    // create close button
     const closeBtn = document.createElement("button");
     closeBtn.className = "close-btn";
     closeBtn.innerHTML = "✕";
     closeBtn.addEventListener("click", closeAll);
 
-    // create image element (use same src but set alt)
     const bigImg = document.createElement("img");
-    // Prefer data-src if you have high-res images; otherwise use same src
     bigImg.src = imgEl.dataset.full || imgEl.src;
     bigImg.alt = imgEl.alt || "Expanded image";
 
-    // append elements
-    modal.appendChild(closeBtn);
-    modal.appendChild(bigImg);
+    modal.append(closeBtn, bigImg);
     overlay.appendChild(modal);
     document.body.appendChild(overlay);
 
-    // show with small timeout for transitions
     requestAnimationFrame(() => {
       overlay.classList.add("show");
       modal.classList.add("show");
     });
 
-    // close when clicking outside the modal (overlay area)
     overlay.addEventListener("click", (e) => {
       if (e.target === overlay) closeAll();
     });
 
-    // Esc key to close
+    document.addEventListener("keydown", escHandler);
+
     function escHandler(e) {
       if (e.key === "Escape") closeAll();
     }
-    document.addEventListener("keydown", escHandler);
 
     function closeAll() {
       modal.classList.remove("show");
       overlay.classList.remove("show");
       document.removeEventListener("keydown", escHandler);
-      setTimeout(() => {
-        overlay.remove();
-      }, 300);
+      setTimeout(() => overlay.remove(), 300);
     }
   }
+
+  // ========== TESTIMONIAL SECTION ==========
+  const testimonials = document.querySelectorAll(".testimonial");
+  const dots = document.querySelectorAll(".dot");
+  let current = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((t, i) => {
+      t.classList.toggle("active", i === index);
+      dots[i]?.classList.toggle("active", i === index);
+    });
+  }
+
+  // Show the first one by default
+  showTestimonial(current);
+
+  // Click anywhere on testimonials container to show next
+  const testimonialsContainer = document.querySelector("#testimonials");
+  if (testimonialsContainer) {
+    testimonialsContainer.addEventListener("click", () => {
+      current = (current + 1) % testimonials.length;
+      showTestimonial(current);
+    });
+  }
+
+  // Click on dots to navigate directly
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", (e) => {
+      e.stopPropagation();
+      current = i;
+      showTestimonial(current);
+    });
+  });
 });
