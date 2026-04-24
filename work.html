@@ -1,46 +1,898 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/fake.css">
-    <title>My Work</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | EmminTech</title>
+  <link rel="icon" type="image/png" href="img/favicon (2).png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #007bff;
+      --secondary: #00c2ff;
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2330;
+      --border: rgba(255,255,255,0.07);
+      --text: #e6e6e6;
+      --muted: #8b949e;
+      --display: 'Syne', sans-serif;
+      --body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE TEXTURE ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed;
+      top: 0; width: 100%;
+      z-index: 100;
+      padding: 1.2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(13,17,23,0.8);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: var(--display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--secondary); }
+
+    .hire-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: linear-gradient(90deg, var(--primary), #0059c2);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .hire-btn:hover { opacity: 0.88; transform: translateY(-1px); color: #fff; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 9rem 5% 5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .page-hero::before {
+      content: 'WORK';
+      position: absolute;
+      top: 5rem; right: 3%;
+      font-family: var(--display);
+      font-size: clamp(5rem, 12vw, 10rem);
+      font-weight: 800;
+      color: rgba(0,123,255,0.04);
+      letter-spacing: -4px;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .page-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    .page-eyebrow span {
+      width: 24px; height: 1px;
+      background: var(--secondary);
+    }
+
+    .page-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      margin-bottom: 1.2rem;
+    }
+
+    .page-hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-hero p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    /* ── FILTER TABS ── */
+    .filter-row {
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+      padding: 0 5%;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: var(--body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.45rem 1.1rem;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.3px;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: rgba(0,123,255,0.12);
+      border-color: rgba(0,123,255,0.35);
+      color: var(--secondary);
+    }
+
+    /* ── PROJECT SHOWCASE ── */
+    .projects-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5% 6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* ── FEATURED (large) card ── */
+    .project-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      background: var(--surface);
+    }
+    .project-featured:hover {
+      border-color: rgba(0,123,255,0.3);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    }
+
+    .project-featured__img {
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+      background: var(--surface2);
+    }
+
+    .project-featured__img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .project-featured:hover .project-featured__img img {
+      transform: scale(1.04);
+    }
+
+    /* Image placeholder when no screenshot */
+    .img-placeholder {
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(0,194,255,0.2);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .img-placeholder i { font-size: 2.5rem; }
+
+    .project-featured__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 60%, var(--surface) 100%);
+      pointer-events: none;
+    }
+
+    .project-featured__content {
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .project-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid;
+    }
+    .tag--web { color: #00c2ff; border-color: rgba(0,194,255,0.25); background: rgba(0,194,255,0.07); }
+    .tag--design { color: #ff9f43; border-color: rgba(255,159,67,0.25); background: rgba(255,159,67,0.07); }
+    .tag--brand { color: #a29bfe; border-color: rgba(162,155,254,0.25); background: rgba(162,155,254,0.07); }
+    .tag--landing { color: #55efc4; border-color: rgba(85,239,196,0.25); background: rgba(85,239,196,0.07); }
+
+    .project-number {
+      font-family: var(--display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: rgba(0,123,255,0.4);
+      letter-spacing: 1px;
+    }
+
+    .project-featured__content h2 {
+      font-family: var(--display);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -1px;
+      line-height: 1.15;
+    }
+
+    .project-featured__content p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      max-width: 380px;
+    }
+
+    .project-details {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .project-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .project-detail__label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.3);
+    }
+    .project-detail__value {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.55rem 1.2rem;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+    .project-link--primary {
+      background: linear-gradient(90deg, var(--primary), #0059c2);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0,123,255,0.25);
+    }
+    .project-link--primary:hover {
+      opacity: 0.88; transform: translateY(-2px); color: #fff;
+    }
+    .project-link--ghost {
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255,255,255,0.02);
+    }
+    .project-link--ghost:hover {
+      border-color: rgba(0,194,255,0.3);
+      color: var(--secondary);
+    }
+
+    /* ── GRID ROW (smaller cards) ── */
+    .projects-grid-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      border-color: rgba(0,123,255,0.3);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+      transform: translateY(-4px);
+    }
+
+    .project-card__img {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: var(--surface2);
+    }
+    .project-card__img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover .project-card__img img { transform: scale(1.05); }
+
+    .project-card__body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+    }
+
+    .project-card__body h3 {
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+
+    .project-card__body p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .project-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+
+    .project-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      transition: gap 0.2s, color 0.2s;
+    }
+    .project-card__link:hover { gap: 10px; color: var(--secondary); }
+
+    /* ── COMING SOON card ── */
+    .project-card--soon {
+      border-style: dashed;
+      border-color: rgba(255,255,255,0.07);
+      background: rgba(22,27,34,0.5);
+    }
+    .project-card--soon:hover {
+      border-color: rgba(0,123,255,0.2);
+      transform: none;
+      box-shadow: none;
+    }
+    .soon-inner {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      text-align: center;
+      gap: 1rem;
+    }
+    .soon-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(0,123,255,0.06);
+      border: 1px solid rgba(0,123,255,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      color: rgba(0,123,255,0.4);
+    }
+    .soon-inner h3 {
+      font-family: var(--display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.3);
+    }
+    .soon-inner p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.2);
+      line-height: 1.65;
+    }
+
+    /* ── CTA STRIP ── */
+    .projects-cta {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: linear-gradient(135deg, #161b22, #1a2235);
+      padding: 3rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .projects-cta__text h3 {
+      font-family: var(--display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.5px;
+    }
+    .projects-cta__text p { color: var(--muted); font-size: 0.9rem; }
+
+    .projects-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, var(--primary), #0059c2);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 100px;
+      white-space: nowrap;
+      box-shadow: 0 4px 24px rgba(0,123,255,0.3);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .projects-cta__btn:hover { opacity: 0.9; transform: translateY(-2px); color: #fff; }
+
+    /* ── IMAGE MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal-img-wrap {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      animation: modalIn 0.3s ease;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .modal-img-wrap img {
+      width: 100%; border-radius: 16px;
+      display: block;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    }
+    .modal-close {
+      position: absolute;
+      top: -16px; right: -16px;
+      width: 36px; height: 36px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--muted);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .modal-close:hover { background: var(--surface2); color: var(--text); }
+
+    /* Expandable images */
+    img.expandable { cursor: zoom-in; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 5%;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer .brand { color: var(--secondary); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .project-featured { grid-template-columns: 1fr; }
+      .project-featured__img { min-height: 260px; }
+      .project-featured__overlay { background: linear-gradient(to bottom, transparent 60%, var(--surface) 100%); }
+    }
+    @media (max-width: 700px) {
+      .projects-grid-row { grid-template-columns: 1fr; }
+      .project-featured__content { padding: 2rem 1.5rem; }
+      .projects-cta { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .page-hero h1 { letter-spacing: -1px; }
+      .page-hero::before { display: none; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h2 class="logo">EMMINTECH</h2>
-    </header>
 
-    <main>
-    <section id="work">
-        <h1>My Work</h1>
-        <p>Welcome to my work showcase! Here you'll find a selection of projects I've worked on.</p>
-        <br>
-        <h1>Project 1</h1>
-        <p>Created My First Portfolio just like a Contact Card as my first Prject</p>
-        <p>Didn't Deploy cos i see no reason too and is still under construction and want to bring something meaningful at of it samething with one f my proect called contact me a platform that looks like lintree</p>
-        <img src="img/First project.png" alt="Screenshot of Project One" class="expandable">
-    </section>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">EMMINTECH</a>
+    <div class="header-right">
+      <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Home</a>
+      <a href="getstarted.html" class="hire-btn"><i class="fa-solid fa-bolt"></i> Hire Me</a>
+    </div>
+  </header>
 
-    <section id="work">
-        <h1>Project Two</h1>
-        <p> Created A Landing Page for a Client which her customers can use to know more about her servce and also contact her and order throught the Process. </p>
-        <img src="img/2nd Project.png" alt="Screenshot of Project Two" class="expandable">
-        <a href="https://starrfruitti.netlify.app/" target="_blank">View</a>
-    </section>
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-eyebrow"><span></span> Selected Work</div>
+    <h1>Projects I've<br><em>built & shipped</em></h1>
+    <p>A showcase of web development, branding, and design work — from landing pages to full sites, crafted to help businesses grow online.</p>
+  </div>
 
-    <section id="work">
-        <h1>Project Three</h1>
-        <p>Then here is This Particular Site you are visiting rn is my third project which i applied alot of energy n due t what have been taught and stl eorking on it</p>
-        <img src="img/3rd  Project.png" alt="Screenshot of Project Three" class="expandable">
-        <br>
-        <h1>And More Still Coming</h1>
-    </section>
-    </main>
+  <!-- Filter Tabs -->
+  <div class="filter-row">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="web">Web Dev</button>
+    <button class="filter-btn" data-filter="design">Graphics & Design</button>
+    <button class="filter-btn" data-filter="landing">Landing Pages</button>
+  </div>
 
-    <footer>
-        <p>© 2025 <strong>EmminTech</strong> | Powered by <span class="brand">Nexua</span></p>
-        <p class="footer-tagline">Welcome To The Future 🚀</p>
-    </footer>
+  <!-- Projects -->
+  <div class="projects-wrap">
+
+    <!-- ── PROJECT 1: Starr Fruitti (FEATURED) ── -->
+    <div class="project-featured" data-category="web landing">
+      <div class="project-featured__img">
+        <img src="img/2nd Project.png" alt="Starr Fruitti Website" class="expandable">
+        <div class="project-featured__overlay"></div>
+      </div>
+      <div class="project-featured__content">
+        <div class="project-meta">
+          <span class="project-number">01</span>
+          <span class="project-tag tag--web">Web Dev</span>
+          <span class="project-tag tag--landing">Landing Page</span>
+        </div>
+        <h2>Starr Fruitti</h2>
+        <p>A vibrant, conversion-focused landing page built for a fruit store client. Designed to showcase products, communicate the brand's energy, and make it easy for customers to browse and get in touch — optimised for both mobile and desktop.</p>
+        <div class="project-details">
+          <div class="project-detail">
+            <span class="project-detail__label">Type</span>
+            <span class="project-detail__value">Client Project</span>
+          </div>
+          <div class="project-detail">
+            <span class="project-detail__label">Stack</span>
+            <span class="project-detail__value">HTML · CSS · JS</span>
+          </div>
+          <div class="project-detail">
+            <span class="project-detail__label">Hosted on</span>
+            <span class="project-detail__value">Netlify</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://starrfruitti.netlify.app/" target="_blank" class="project-link project-link--primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+          </a>
+          <a href="img/2nd Project.png" class="project-link project-link--ghost expandable-trigger" data-img="img/2nd Project.png">
+            <i class="fa-solid fa-expand"></i> Preview
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── GRID ROW 1 ── -->
+    <div class="projects-grid-row">
+
+      <!-- PROJECT 2: Rady Business -->
+      <div class="project-card" data-category="landing">
+        <div class="project-card__img">
+          <img src="img/rady_business.png" alt="Rady Business Landing Page" class="expandable">
+        </div>
+        <div class="project-card__body">
+          <div class="project-meta">
+            <span class="project-number">02</span>
+            <span class="project-tag tag--landing">Landing Page</span>
+          </div>
+          <h3>Rady Business</h3>
+          <p>A clean, directional landing page for a country wear and lifestyle brand — mugs, country clothing, and accessories. Built to capture visitors and funnel them straight to the shop, keeping the experience fast and on-brand.</p>
+          <div class="project-card__footer">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <span class="project-tag tag--web" style="font-size:0.68rem;">HTML</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">CSS</span>
+            </div>
+            <a href="https://radybusiness.netlify.app" target="_blank" class="project-card__link">
+              View Live <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: Personal Contact Card -->
+      <div class="project-card" data-category="web design">
+        <div class="project-card__img">
+          <img src="img/First project.png" alt="Contact Card Project" class="expandable">
+        </div>
+        <div class="project-card__body">
+          <div class="project-meta">
+            <span class="project-number">03</span>
+            <span class="project-tag tag--design">Design</span>
+            <span class="project-tag tag--web">Web</span>
+          </div>
+          <h3>Digital Contact Card</h3>
+          <p>My first project — a sleek digital contact card built to consolidate personal branding, social links, and contact details into one shareable page. Designed with a Linktree-style concept, responsive across all devices.</p>
+          <div class="project-card__footer">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <span class="project-tag tag--web" style="font-size:0.68rem;">HTML</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">CSS</span>
+            </div>
+            <a href="img/First project.png" class="project-card__link expandable-trigger" data-img="img/First project.png">
+              Preview <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── GRID ROW 2 ── -->
+    <div class="projects-grid-row">
+
+      <!-- PROJECT 4: Creative Tech -->
+      <div class="project-card" data-category="web design">
+        <div class="project-card__img">
+          <img src="img/creative_tech.png" alt="Creative Tech Portfolio" class="expandable">
+        </div>
+        <div class="project-card__body">
+          <div class="project-meta">
+            <span class="project-number">04</span>
+            <span class="project-tag tag--web">Web Dev</span>
+            <span class="project-tag tag--design">Portfolio</span>
+          </div>
+          <h3>Creative Tech Portfolio</h3>
+          <p>A bold, tech-forward portfolio site built to showcase creative and digital work. Features a dark sci-fi aesthetic, animated hero, project showcases, and a services section — designed to make a strong first impression on clients.</p>
+          <div class="project-card__footer">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <span class="project-tag tag--web" style="font-size:0.68rem;">HTML</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">CSS</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">JS</span>
+            </div>
+            <a href="https://creativetechies.netlify.app" target="_blank" class="project-card__link">
+              View Live <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 5: The Brother Collection -->
+      <div class="project-card" data-category="web brand landing">
+        <div class="project-card__img">
+            <img src="img/The Brother Collection.png" alt="The Brother Collection" class="expandable">
+          <div class="img-placeholder">
+            <i class="fa-solid fa-music"></i>
+            <span>The Brother Collection</span>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-meta">
+            <span class="project-number">05</span>
+            <span class="project-tag tag--brand">Branding</span>
+            <span class="project-tag tag--web">Web Dev</span>
+          </div>
+          <h3>The Brother Collection</h3>
+          <p>A lifestyle, music and fashion brand site — built to capture the bold identity of a multi-disciplinary creative brand. Includes a store front, music section, and fashion lookbook, balancing cultural energy with a clean modern layout.</p>
+          <div class="project-card__footer">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <span class="project-tag tag--web" style="font-size:0.68rem;">HTML</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">CSS</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">JS</span>
+            </div>
+            <span class="project-card__link" style="color:var(--muted);cursor:default;font-size:0.78rem;">In Progress</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── FEATURED 2: This Portfolio ── -->
+    <div class="project-featured" data-category="web design" style="margin-bottom:1.5rem;">
+      <div class="project-featured__img">
+        <img src="img/3rd  Project.png" alt="EmminTech Portfolio" class="expandable">
+        <div class="project-featured__overlay"></div>
+      </div>
+      <div class="project-featured__content">
+        <div class="project-meta">
+          <span class="project-number">06</span>
+          <span class="project-tag tag--web">Web Dev</span>
+          <span class="project-tag tag--design">Design</span>
+        </div>
+        <h2>EmminTech Portfolio</h2>
+        <p>This very site — my personal developer portfolio built to represent my brand, showcase my work, and convert visitors into clients. Features animated sections, a project showcase, testimonials, pricing plans, and a full client onboarding flow via Nexua.</p>
+        <div class="project-details">
+          <div class="project-detail">
+            <span class="project-detail__label">Type</span>
+            <span class="project-detail__value">Personal Project</span>
+          </div>
+          <div class="project-detail">
+            <span class="project-detail__label">Stack</span>
+            <span class="project-detail__value">HTML · CSS · JS</span>
+          </div>
+          <div class="project-detail">
+            <span class="project-detail__label">Hosted on</span>
+            <span class="project-detail__value">Netlify</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://emmintech.netlify.app/" target="_blank" class="project-link project-link--primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+          </a>
+          <a href="img/3rd  Project.png" class="project-link project-link--ghost expandable-trigger" data-img="img/3rd  Project.png">
+            <i class="fa-solid fa-expand"></i> Preview
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CTA STRIP ── -->
+    <div class="projects-cta">
+      <div class="projects-cta__text">
+        <h3>Want to be next on this list?</h3>
+        <p>I'm available for new projects — let's build something together.</p>
+      </div>
+      <a href="getstarted.html" class="projects-cta__btn">
+        <i class="fa-solid fa-rocket"></i> Start a Project
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2025 <strong>EmminTech</strong> | Powered by <span class="brand">Nexua</span></p>
+  </footer>
+
+  <!-- Image Modal -->
+  <div class="modal-overlay" id="imgModal">
+    <div class="modal-img-wrap">
+      <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      <img src="" alt="Project preview" id="modalImg">
+    </div>
+  </div>
+
+  <script>
+    // ── Filter ──
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const allProjects = document.querySelectorAll('[data-category]');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        allProjects.forEach(p => {
+          const cats = p.dataset.category || '';
+          p.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
+        });
+      });
+    });
+
+    // ── Image Modal ──
+    const modal    = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalClose = document.getElementById('modalClose');
+
+    function openModal(src) {
+      modalImg.src = src;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('img.expandable').forEach(img => {
+      img.addEventListener('click', () => openModal(img.src));
+    });
+    document.querySelectorAll('.expandable-trigger').forEach(el => {
+      el.addEventListener('click', e => { e.preventDefault(); openModal(el.dataset.img); });
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  </script>
+
 </body>
 </html>

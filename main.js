@@ -89,3 +89,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+(function(){
+      const roles=["Web Developer","Tech Innovator","Financial Analyst","Founder of Nexua","Graphics Designer"];
+      const el=document.getElementById("typing-text");
+      if(!el)return;
+      let ri=0,ci=0,del=false;
+      function type(){
+        const cur=roles[ri];
+        if(!del){el.textContent=cur.slice(0,++ci);if(ci===cur.length){del=true;setTimeout(type,1800);return;}}
+        else{el.textContent=cur.slice(0,--ci);if(ci===0){del=false;ri=(ri+1)%roles.length;}}
+        setTimeout(type,del?55:90);
+      }
+      type();
+    })();

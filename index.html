@@ -17,10 +17,13 @@
     <meta name="twitter:image" content="https://emmintech.netlify.app/img/og-image.jpg" />
     <meta name="twitter:url" content="https://emmintech.netlify.app/" />
 
-    <link rel="stylesheet" href="css/fake.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="img/favicon (2).png">
-    <title>MY PORTFOLIO</title>
+    <title>Web Developer Portfolio | Emmanuel Joshua</title>
 </head>
 <body>
     <header>
@@ -38,133 +41,799 @@
 
     <main>
     <section id="hero">
-        <h1>Hi, I'm</h1>
-        <h1>Emmanuel Joshua</h1>
-        <h4 id="typing-text" >Web Developer | Tech Innovator | Financial Analyst | Founder of <span class="brand">Nexua</span></h4>
-        <img src="img/mypics.jpg" alt="Profile picture">
-        <a href="work.html" target="_blank"><button>View My Work</button></a>
-        <a href="/resume/my resume (2).pdf" download class="btn"><button>Download Resume</button></a>
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-grid"></div>
+    </div>
+ 
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          Available for new projects
+        </div>
+ 
+        <h1 class="hero-name">
+          Hi, I'm<br>
+          <span class="hero-name--accent">Emmanuel</span><br>
+          Joshua
+        </h1>
+ 
+        <p class="hero-roles">
+          <span id="typing-text"></span><span class="cursor">|</span>
+        </p>
+ 
+        <p class="hero-bio">
+          I build websites, craft digital experiences, and create visual identities
+          that help businesses grow — through my company <strong class="nexua-brand">Nexua</strong>.
+        </p>
+ 
+        <div class="hero-actions">
+          <a href="getstarted.html" target="_blank" class="btn-primary">
+            Get Started
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="work.html" target="_blank" class="btn-ghost">View My Work</a>
+          <a href="https://emmintech.netlify.app/resume/my%20resume%20(2).pdf" target="_blank" class="btn-ghost">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M7 1v8M3 6l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Resume
+          </a>
+        </div>
+ 
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Years Building</span>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring hero-photo-ring--outer"></div>
+        <div class="hero-photo-ring hero-photo-ring--inner"></div>
+        <div class="hero-photo-frame">
+          <!-- Your real photo will show here — img/mypics.jpg -->
+          <div class="photo-placeholder">
+            <i class="fa-solid fa-user"></i>
+            <span><img src="img/mypics.jpeg" alt="" srcset=""></span>
+          </div>
+        </div>
+        <div class="hero-badge-float hero-badge-float--tl">⚡ Web Dev</div>
+        <div class="hero-badge-float hero-badge-float--br">🎨 Design</div>
+      </div>
+    </div>
+ 
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I’m Emmanuel Joshua, known online as <strong>EmminTech</strong>.
-            I’m a passionate Web Developer and Tech Innovator focused on building digital products and futuristic solutions through my company, <strong>Nexua</strong>.
-            My goal is to create impactful designs, powerful applications, and technologies that shape the future.</p>
+      <div class="about-inner">
+    
+        <div class="about-text">
+          <div class="about-eyebrow"><span></span> Who I am</div>
+          <h2>Developer. Founder.<br>Problem <span class="about-accent">Solver.</span></h2>
+          <p>
+            I'm Emmanuel Joshua — known online as <strong>EmminTech</strong>. I'm a self-taught web developer,
+            graphic designer, and financial analyst based in Nigeria, and the founder of
+            <strong class="nexua">Nexua</strong> — my creative tech company built to deliver
+            powerful digital products for businesses that want to grow online.
+          </p>
+          <p>
+            I don't just build websites. I build tools that help brands show up,
+            stand out, and convert visitors into customers.
+          </p>
+ 
+          <div class="about-hats">
+            <div class="about-hat">
+              <i class="fa-solid fa-code"></i>
+              <span>Web Developer</span>
+            </div>
+            <div class="about-hat">
+              <i class="fa-solid fa-rocket"></i>
+              <span>Tech Founder</span>
+            </div>
+            <div class="about-hat">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Financial Analyst</span>
+            </div>
+          </div>
+    
+          <a href="about.html" target="_blank" class="about-btn">
+            Read Full Story <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+ 
+        <div class="about-photo">
+          <div class="about-photo-ring"></div>
+          <div class="about-photo-frame">
+            <img src="img/mypics.jpeg" alt="Emmanuel Joshua">
+          </div>
+          <div class="about-stat-card about-stat-card--1">
+            <span class="asc-number">6+</span>
+            <span class="asc-label">Projects Shipped</span>
+          </div>
+          <div class="about-stat-card about-stat-card--2">
+            <span class="asc-number">5+</span>
+            <span class="asc-label">Happy Clients</span>
+          </div>
+        </div>
+    
+      </div>
     </section>
 
     <section id="project">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-            <h3>Project One – Contact Card</h3>
-            <p>A sleek and modern digital contact card designed to showcase personal details, social links, and branding in one place. Built with responsive design principles for smooth display on all devices.</p>
-            <img src="img/First project.png" alt="Screenshot of Project One" class="expandable">
+      <div class="project-header">
+        <div class="project-eyebrow"><span></span> Selected Work</div>
+        <h2>Projects I've Built</h2>
+        <p>A mix of client work and personal projects — each one crafted to solve a real problem.</p>
+      </div>
+ 
+      <div class="project-container">
+    
+        <!-- Card 1 -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="img/2nd Project.png" alt="Starr Fruitti" class="expandable">
+            <div class="project-card__overlay">
+              <a href="https://starrfruitti.netlify.app/" target="_blank" class="project-card__live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+              </a>
             </div>
-
-            <div class="project-card">
-                <h3>Project Two – Starr Fruitti Website</h3>
-                <p>A colorful and interactive fruit store website made for an engaging shopping experience. Focused on clean layout, product visuals, and easy navigation for both mobile and desktop users</p>
-                <img src="img/2nd Project.png" alt="Screenshot of Project Two" class="expandable">
-                <a href="https://starrfruitti.netlify.app/" target="_blank">View</a>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="p-tag p-tag--web">Web Dev</span>
+              <span class="p-tag p-tag--land">Landing Page</span>
             </div>
-
-            <div class="project-card">
-                <h3>Project Three – Personal Portfolio</h3>
-                <p>My personal portfolio website highlighting my projects, skills, and services. It’s designed to represent my growth as a developer and reflect my brand identity with a minimalist yet creative interface.</p>
-                <img src="img/3rd  Project.png" alt="Screenshot of Project Three" class="expandable">
-                <a href="https://emmintech.netlify.app/" target="_blank">View</a>
-            </div>
+            <h3>Starr Fruitti</h3>
+            <p>A vibrant, conversion-focused landing page for a fruit store client — clean layout, product visuals, and smooth mobile experience.</p>
+          </div>
         </div>
+    
+        <!-- Card 2 -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="img/rady_business.png" alt="Rady Business" class="expandable">
+            <div class="project-card__overlay">
+              <a href="https://radybusiness.netlify.app/" target="_blank" class="project-card__live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="p-tag p-tag--land">Landing Page</span>
+            </div>
+            <h3>Rady Business</h3>
+            <p>A directional landing page for a country wear and lifestyle brand — designed to funnel visitors straight to the shop.</p>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="img/creative_tech.png" alt="Creative Tech" class="expandable">
+            <div class="project-card__overlay">
+              <a href="https://creativetechies.netlify.app/" target="_blank" class="project-card__live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="p-tag p-tag--web">Web Dev</span>
+              <span class="p-tag p-tag--design">Portfolio</span>
+            </div>
+            <h3>Creative Tech</h3>
+            <p>A bold, dark-themed portfolio site built for a creative tech brand — animated hero, services section, and strong visual identity.</p>
+          </div>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="img/The Brother Collection.png" alt="The Brother Collection" class="expandable">
+            <div class="project-card__overlay">
+              <a href="https://thebrothercollection.netlify.app/" target="_blank" class="project-card__live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="p-tag p-tag--web">Web Dev</span>
+              <span class="p-tag p-tag--brand">Branding</span>
+            </div>
+            <h3>The Brother Collection</h3>
+            <p>A lifestyle, music and fashion brand site — balancing cultural energy with a clean modern layout and integrated store front.</p>
+          </div>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="img/First project.png" alt="Digital Contact Card" class="expandable">
+            <div class="project-card__overlay">
+              <span class="project-card__live project-card__live--muted">
+                <i class="fa-solid fa-lock"></i> Personal
+              </span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="p-tag p-tag--design">Design</span>
+              <span class="p-tag p-tag--web">Web</span>
+            </div>
+            <h3>Digital Contact Card</h3>
+            <p>My first project — a sleek Linktree-style contact card to consolidate personal branding and social links in one shareable page.</p>
+          </div>
+        </div>
+    
+        <!-- Card 6 -->
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="img/3rd  Project.png" alt="EmminTech Portfolio" class="expandable">
+            <div class="project-card__overlay">
+              <a href="https://emmintech.netlify.app/" target="_blank" class="project-card__live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="p-tag p-tag--web">Web Dev</span>
+              <span class="p-tag p-tag--design">Design</span>
+            </div>
+            <h3>EmminTech Portfolio</h3>
+            <p>This very site — my personal portfolio representing my brand, showcasing my work, and converting visitors into clients via Nexua.</p>
+          </div>
+        </div>
+    
+      </div>
+    
+      <!-- View all -->
+      <div class="project-footer">
+        <a href="work.html" target="_blank" class="project-all-btn">
+          View Full Project Showcase <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill-icons">
+      <div class="skills-header">
+        <div class="skills-eyebrow"><span></span> What I work with</div>
+        <h2>Skills & Tools</h2>
+        <p>The technologies I use to design, build, and ship digital products that work.</p>
+      </div>
+    
+      <div class="skills-body">
+    
+        <!-- Left: icon grid -->
+        <div class="skill-icons-grid">
+          <div class="skill-icon-card">
             <i class="fa-brands fa-html5"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="skill-icon-card">
             <i class="fa-brands fa-css3-alt"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="skill-icon-card">
             <i class="fa-brands fa-js"></i>
-            <i class="fa-brands fa-figma"></i>
-            <i class="fa-brands fa-python"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-upwork"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-icon-card">
             <i class="fa-brands fa-react"></i>
+            <span>React</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="fa-brands fa-python"></i>
+            <span>Python</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="fa-brands fa-figma"></i>
+            <span>Figma</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="skill-icon-card">
+            <i class="fa-brands fa-upwork"></i>
+            <span>Upwork</span>
+          </div>
         </div>
+    
+        <!-- Right: progress bars -->
+        <div class="skill-bars">
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
+              <span class="skill-bar__pct">90%</span>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-bar__fill" style="--w:90%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skill-bar__pct">72%</span>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-bar__fill" style="--w:72%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-brands fa-react"></i> React</span>
+              <span class="skill-bar__pct">55%</span>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-bar__fill" style="--w:55%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-brands fa-figma"></i> UI / Figma</span>
+              <span class="skill-bar__pct">78%</span>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-bar__fill" style="--w:78%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-solid fa-paintbrush"></i> Graphics Design</span>
+              <span class="skill-bar__pct">80%</span>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-bar__fill" style="--w:80%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-solid fa-chart-line"></i> Financial Analysis</span>
+              <span class="skill-bar__pct">75%</span>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-bar__fill" style="--w:75%"></div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
     </section>
 
     <section id="service">
+      <div class="service-header">
+        <div class="service-eyebrow"><span></span> What I offer</div>
         <h2>My Services</h2>
-        <div class="service-container">
-            <div class="service-card">
-                <h3>Website Development/Design</h3>
-                <img src="img/webdev.jpg" alt="Website Development/Design">
-                <i class="fa-solid fa-code"></i>
-                <p>I design and build responsive, user-focused websites that bring brands to life — from simple landing pages to advanced web apps that drive engagement.</p>
-            </div>
+        <p>Three focused services — each built to help your business look professional and grow online.</p>
+      </div>
+    
+      <div class="service-container">
+    
+        <!-- Web Dev -->
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--blue">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="service-card__top-bar service-card__top-bar--blue"></div>
+          <h3>Website Development</h3>
+          <p>I design and build responsive, user-focused websites that bring brands to life — from clean landing pages to multi-page business sites that drive real engagement.</p>
+          <ul class="service-deliverables">
+            <li><i class="fa-solid fa-check"></i> Landing pages & business sites</li>
+            <li><i class="fa-solid fa-check"></i> Portfolio & personal sites</li>
+            <li><i class="fa-solid fa-check"></i> Mobile-first, SEO-ready</li>
+          </ul>
+          <div class="service-card__footer">
+            <span class="service-price">From ₦50,000</span>
+            <a href="getstarted.html" class="service-cta">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+    
+        <!-- Web Hosting -->
+        <div class="service-card service-card--featured">
+          <div class="service-card__icon service-card__icon--cyan">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <div class="service-card__top-bar service-card__top-bar--cyan"></div>
+          <span class="service-popular">Most Requested</span>
+          <h3>Web Hosting & Setup</h3>
+          <p>I handle everything — domain registration, hosting configuration, SSL, and deployment — so your website goes live fast, stays online, and loads quickly for every visitor.</p>
+          <ul class="service-deliverables">
+            <li><i class="fa-solid fa-check"></i> Domain + hosting setup</li>
+            <li><i class="fa-solid fa-check"></i> SSL certificate & security</li>
+            <li><i class="fa-solid fa-check"></i> Netlify / cPanel deployment</li>
+          </ul>
+          <div class="service-card__footer">
+            <span class="service-price">From ₦30,000</span>
+            <a href="getstarted.html" class="service-cta">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+    
+        <!-- Graphics -->
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--orange">
+            <i class="fa-solid fa-paintbrush"></i>
+          </div>
+          <div class="service-card__top-bar service-card__top-bar--orange"></div>
+          <h3>Graphics Design</h3>
+          <p>Bold, clean, and on-brand visuals — flyers, logos, social media kits, and more. I help businesses look sharp both online and in print, creating designs people actually remember.</p>
+          <ul class="service-deliverables">
+            <li><i class="fa-solid fa-check"></i> Logo & brand identity</li>
+            <li><i class="fa-solid fa-check"></i> Flyers, posters & banners</li>
+            <li><i class="fa-solid fa-check"></i> Social media creatives</li>
+          </ul>
+          <div class="service-card__footer">
+            <span class="service-price">From ₦10,000</span>
+            <a href="getstarted.html" class="service-cta">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+    
+      </div>
+    </section>
 
-            <div class="service-card">
-                <h3>Web Hosting</h3>
-                <img src="img/webhosting.jpg" alt="Web Hosting">
-                <i class="fa-solid fa-bolt"></i>
-                <p>I offer reliable web hosting solutions and setup services to ensure your website is always online, fast, and secure — perfect for startups and growing brands.</p>
-            </div>
+    <section id="pricing">
+      <div class="pricing-header">
+        <span class="pricing-eyebrow">Transparent Pricing</span>
+        <h2>Simple, Honest Rates</h2>
+        <p>No hidden fees. No surprises. Pick a plan that fits your project — or reach out for a custom quote.</p>
+      </div>
 
-            <div class="service-card">
-                <h3>Graphics Design</h3>
-                <img src="img/webhosting.jpg" alt="Web Hosting">
-                <i class="fa-solid fa-paint-brush"></i>
-                <p>I design clean, bold, and visually appealing graphics for brands, events, and digital content. From social media creatives to logos, I help businesses stand out.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-card__top">
+            <div class="pricing-tier-icon"><i class="fa-solid fa-seedling"></i></div>
+              <h3>Starter</h3>
+              <p class="pricing-desc">Perfect for individuals, startups, and small businesses who need a clean online presence fast.</p>
+              <div class="pricing-amount">
+                <span class="pricing-from">from</span>
+                <span class="pricing-currency">₦</span>
+                <span class="pricing-figure">50,000</span>
+              </div>
             </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> 1–3 page responsive website</li>
+              <li><i class="fa-solid fa-check"></i> Mobile-friendly design</li>
+              <li><i class="fa-solid fa-check"></i> Contact form integration</li>
+              <li><i class="fa-solid fa-check"></i> Basic SEO setup</li>
+              <li><i class="fa-solid fa-check"></i> 1 round of revisions</li>
+              <li><i class="fa-solid fa-check"></i> Delivery in 5–7 days</li>
+              <li class="pricing-feature--off"><i class="fa-solid fa-xmark"></i> Hosting setup</li>
+              <li class="pricing-feature--off"><i class="fa-solid fa-xmark"></i> Graphics design</li>
+            </ul>
+            <a href="getstarted.html" class="pricing-cta pricing-cta--ghost">Get Started</a>
+          </div>
+
+          <div class="pricing-card pricing-card--featured">
+            <span class="pricing-popular">Most Popular</span>
+            <div class="pricing-card__top">
+              <div class="pricing-tier-icon pricing-tier-icon--featured"><i class="fa-solid fa-rocket"></i></div>
+              <h3>Growth</h3>
+              <p class="pricing-desc">For businesses that want a full professional web presence with design, hosting, and branding.</p>
+              <div class="pricing-amount">
+                <span class="pricing-from">from</span>
+                <span class="pricing-currency">₦</span>
+                <span class="pricing-figure">150,000</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> 5–8 page custom website</li>
+              <li><i class="fa-solid fa-check"></i> Mobile-first responsive design</li>
+              <li><i class="fa-solid fa-check"></i> Contact & inquiry forms</li>
+              <li><i class="fa-solid fa-check"></i> Full SEO optimization</li>
+              <li><i class="fa-solid fa-check"></i> 3 rounds of revisions</li>
+              <li><i class="fa-solid fa-check"></i> Hosting & domain setup</li>
+              <li><i class="fa-solid fa-check"></i> Logo + brand graphics</li>
+              <li><i class="fa-solid fa-check"></i> Delivery in 10–14 days</li>
+            </ul>
+            <a href="getstarted.html" class="pricing-cta pricing-cta--primary">Get Started</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-card__top">
+              <div class="pricing-tier-icon"><i class="fa-solid fa-gem"></i></div>
+              <h3>Custom</h3>
+              <p class="pricing-desc">Large projects, web apps, e-commerce, ongoing retainers, or anything that needs a tailored approach.</p>
+              <div class="pricing-amount pricing-amount--custom">
+                <span class="pricing-figure">Let's Talk</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Unlimited pages & features</li>
+              <li><i class="fa-solid fa-check"></i> Custom web app / e-commerce</li>
+              <li><i class="fa-solid fa-check"></i> Full branding package</li>
+              <li><i class="fa-solid fa-check"></i> Priority delivery</li>
+              <li><i class="fa-solid fa-check"></i> Unlimited revisions</li>
+              <li><i class="fa-solid fa-check"></i> Monthly maintenance option</li>
+              <li><i class="fa-solid fa-check"></i> Dedicated support</li>
+              <li><i class="fa-solid fa-check"></i> Timeline agreed upfront</li>
+            </ul>
+            <a href="getstarted.html" class="pricing-cta pricing-cta--ghost">Book a Call</a>
+          </div>
+        </div>
+
+        <div class="pricing-breakdown">
+          <h3 class="pricing-breakdown__title">Individual Service Rates</h3>
+          <p class="pricing-breakdown__sub">Need just one thing done? Here's what each service costs on its own.</p>
+          <div class="pricing-table-wrap">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>What's Included</th>
+                  <th>Turnaround</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="service-name"><i class="fa-solid fa-file-code"></i> Landing Page</span></td>
+                  <td>1–2 pages, responsive, contact form, basic SEO</td>
+                  <td>3–5 days</td>
+                  <td class="price-cell">₦30,000 – ₦60,000</td>
+                </tr>
+                <tr>
+                  <td><span class="service-name"><i class="fa-solid fa-globe"></i> Business Website</span></td>
+                  <td>3–5 pages, custom design, mobile-first, SEO</td>
+                  <td>7–10 days</td>
+                  <td class="price-cell">₦80,000 – ₦150,000</td>
+                </tr>
+                <tr>
+                  <td><span class="service-name"><i class="fa-solid fa-user-circle"></i> Portfolio Website</span></td>
+                  <td>Personal or creative portfolio, project showcase</td>
+                  <td>5–7 days</td>
+                  <td class="price-cell">₦50,000 – ₦100,000</td>
+                </tr>
+                <tr>
+                  <td><span class="service-name"><i class="fa-solid fa-server"></i> Web Hosting Setup</span></td>
+                  <td>Domain + hosting config, SSL, Netlify/cPanel deploy</td>
+                  <td>1–2 days</td>
+                  <td class="price-cell">₦20,000 – ₦40,000</td>
+                </tr>
+                <tr>
+                  <td><span class="service-name"><i class="fa-solid fa-image"></i> Flyer / Poster</span></td>
+                  <td>1 design, print & digital ready, 1 revision</td>
+                  <td>24–48 hrs</td>
+                  <td class="price-cell">₦10,000 – ₦25,000</td>
+                </tr>
+                <tr>
+                  <td><span class="service-name"><i class="fa-solid fa-copyright"></i> Logo Design</span></td>
+                  <td>2 concepts, source files (PNG, SVG), 2 revisions</td>
+                  <td>3–5 days</td>
+                  <td class="price-cell">₦30,000 – ₦80,000</td>
+                </tr>
+                <tr>
+                  <td><span class="service-name"><i class="fa-solid fa-icons"></i> Social Media Kit</span></td>
+                  <td>5 branded templates (posts, stories, covers)</td>
+                  <td>3–4 days</td>
+                  <td class="price-cell">₦25,000 – ₦50,000</td>
+                </tr>
+                <tr class="pricing-table__cta-row">
+                  <td colspan="4">
+                    <span>Don't see your project here?</span>
+                    <a href="getstarted.html" target="_blank">Get a custom quote →</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pricing-note">
+          <i class="fa-solid fa-circle-info"></i>
+          All prices are in Nigerian Naira (₦). International clients are billed in USD at equivalent rates. A 50% deposit is required to begin any project.
         </div>
     </section>
 
     <section id="hire-me">
-        <h2>Hire Me</h2>
-        <a href="/resume/my resume (2).pdf" download class="btn"><button>Download Resume</button></a>
+      <div class="hireme-inner">
+    
+        <div class="hireme-text">
+          <div class="hireme-eyebrow"><span></span> Open for work</div>
+          <h2>Let's Build Something<br><span class="hireme-accent">Together</span></h2>
+          <p>I'm currently available for new projects — websites, landing pages, graphics, and hosting. If you have a business idea or need a digital upgrade, I'm your person.</p>
+          <div class="hireme-actions">
+            <a href="getstarted.html" class="hireme-btn-primary">
+              <i class="fa-solid fa-rocket"></i> Start a Project
+            </a>
+            <a href="/resume/my resume (2).pdf" download class="hireme-btn-ghost">
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+    
+        <div class="hireme-cards">
+          <div class="hireme-card">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Fast Turnaround</strong>
+              <span>Most projects delivered in 3–14 days</span>
+            </div>
+          </div>
+          <div class="hireme-card">
+            <i class="fa-solid fa-comments"></i>
+            <div>
+              <strong>Clear Communication</strong>
+              <span>Updates at every stage, no ghosting</span>
+            </div>
+          </div>
+          <div class="hireme-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <strong>Quality Guaranteed</strong>
+              <span>Revisions included in every project</span>
+            </div>
+          </div>
+          <div class="hireme-card">
+            <i class="fa-solid fa-globe"></i>
+            <div>
+              <strong>Global Clients</strong>
+              <span>Serving Nigeria and clients worldwide</span>
+            </div>
+          </div>
+        </div>
+    
+      </div>
     </section>
-
+    
     <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial active"><img src="img/1.png" alt="On Landing Page"></div>
-        <div class="testimonial"><img src="img/2.png" alt="On Church Flyer"></div>
-        <div class="testimonial"><img src="img/3.png" alt="Social Media S.E.O"></div>
-        <div class="testimonial"><img src="img/4.png" alt="Web Hosting"></div>
-        <div class="testimonial"><img src="img/5.png" alt="Web Tutoring"></div>
-        <p class="hint">Click to view next testimonial ➜</p>
+      <div class="testimonials-header">
+        <div class="testimonials-eyebrow"><span></span> Social proof</div>
+        <h2>What Clients Say</h2>
+        <p>Real feedback from real people I've worked with.</p>
+      </div>
+    
+      <div class="testimonials-stage">
+        <div class="testimonial active"><img src="img/1.png" alt="Testimonial — Landing Page"></div>
+        <div class="testimonial"><img src="img/2.png" alt="Testimonial — Church Flyer"></div>
+        <div class="testimonial"><img src="img/3.png" alt="Testimonial — Social Media SEO"></div>
+        <div class="testimonial"><img src="img/4.png" alt="Testimonial — Web Hosting"></div>
+        <div class="testimonial"><img src="img/5.png" alt="Testimonial — Web Tutoring"></div>
+      </div>
+    
+      <!-- Controls row -->
+      <div class="testimonials-controls">
+        <button class="t-arrow t-arrow--prev" id="tPrev" aria-label="Previous">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
         <div class="testimonial-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
+        <button class="t-arrow t-arrow--next" id="tNext" aria-label="Next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    
+      <p class="hint">Click the arrows or tap the image to navigate</p>
     </section>
 
-
-    <section id="newsletter">
-        <h2>Newsletter</h2>
-        <h3>Subscribe to My Updates</h3>
-        <p>Get my latest projects, tutorials and news directly in your inbox</p>
-        <form name="newsletter" method="POST" data-netlify="true" action="thanks.html">
-        <input type="hidden" name="form-name" value="newsletter">
-        <input type="text" name="name" placeholder="Enter your name" required>
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-        </form>
-    </section>
-
-    <section id="Contact">
-        <h2>Contact Me</h2>
-        <div class="social-links">
-            <a href="https://www.facebook.com/allenaustine.barry" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/emmanuel_joshua.af/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@josh.exe1" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.linkedin.com/in/emmajosh-/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/EMJO01" aria-label="GitHub profile" target="_blank"><i class="fab fa-github"></i></a>
-            <a href=" https://wa.me/qr/U5IBXNR2FMBFC1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://x.com/Emmanue0108" target="_blank"><i class="fab fa-x-twitter"></i></a>
+ 
+      <section id="newsletter">
+        <div class="newsletter-inner">
+      
+          <div class="newsletter-text">
+            <div class="newsletter-eyebrow"><span></span> Stay in the loop</div>
+            <h2>Get Updates From<br><span class="newsletter-accent">EmminTech</span></h2>
+            <p>New projects, tutorials, tips on web development, and what's happening at Nexua — delivered straight to your inbox. No spam, ever.</p>
+            <div class="newsletter-perks">
+              <span><i class="fa-solid fa-check"></i> Free to subscribe</span>
+              <span><i class="fa-solid fa-check"></i> No spam</span>
+              <span><i class="fa-solid fa-check"></i> Unsubscribe anytime</span>
+            </div>
+          </div>
+      
+          <div class="newsletter-form-wrap">
+            <form name="newsletter" method="POST" data-netlify="true" action="thanks.html" class="newsletter-form">
+              <input type="hidden" name="form-name" value="newsletter">
+              <div class="newsletter-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="name" placeholder="Your name" required>
+              </div>
+              <div class="newsletter-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" placeholder="Your email address" required>
+              </div>
+              <button type="submit" class="newsletter-btn">
+                <i class="fa-solid fa-paper-plane"></i> Subscribe Now
+              </button>
+            </form>
+            <p class="newsletter-note">Join others already subscribed. Unsubscribe anytime.</p>
+          </div>
+      
         </div>
-    </section>
+      </section>
+      
+      <section id="Contact">
+        <div class="contact-inner">
+      
+          <div class="contact-text">
+            <div class="contact-eyebrow"><span></span> Get in touch</div>
+            <h2>Let's Connect</h2>
+            <p>Whether you have a project in mind, a question about my services, or just want to say hi — I'm always open to a conversation. Pick your preferred platform and reach out.</p>
+            <a href="getstarted.html" class="contact-cta">
+              <i class="fa-solid fa-bolt"></i> Start a Project Instead
+            </a>
+          </div>
+      
+          <div class="contact-links-wrap">
+            <a href="https://wa.me/message/QVGHYLTLOJNAE1" target="_blank" class="contact-link contact-link--whatsapp">
+              <div class="contact-link__icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-link__text">
+                <strong>WhatsApp</strong>
+                <span>Fastest response</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link__arrow"></i>
+            </a>
+            <a href="https://www.instagram.com/emminntech/" target="_blank" class="contact-link contact-link--instagram">
+              <div class="contact-link__icon"><i class="fab fa-instagram"></i></div>
+              <div class="contact-link__text">
+                <strong>Instagram</strong>
+                <span>@emminntech</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link__arrow"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/emmajosh-/" target="_blank" class="contact-link contact-link--linkedin">
+              <div class="contact-link__icon"><i class="fab fa-linkedin"></i></div>
+              <div class="contact-link__text">
+                <strong>LinkedIn</strong>
+                <span>Professional inquiries</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link__arrow"></i>
+            </a>
+            <a href="https://x.com/Emmanue0108" target="_blank" class="contact-link contact-link--x">
+              <div class="contact-link__icon"><i class="fab fa-x-twitter"></i></div>
+              <div class="contact-link__text">
+                <strong>X (Twitter)</strong>
+                <span>@Emmanue0108</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link__arrow"></i>
+            </a>
+            <a href="https://github.com/EMJO01" target="_blank" class="contact-link contact-link--github">
+              <div class="contact-link__icon"><i class="fab fa-github"></i></div>
+              <div class="contact-link__text">
+                <strong>GitHub</strong>
+                <span>Check my code</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link__arrow"></i>
+            </a>
+            <a href="https://www.tiktok.com/@daylight.366" target="_blank" class="contact-link contact-link--tiktok">
+              <div class="contact-link__icon"><i class="fab fa-tiktok"></i></div>
+              <div class="contact-link__text">
+                <strong>TikTok</strong>
+                <span>@josh.exe1</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-link__arrow"></i>
+            </a>
+          </div>
+      
+        </div>
+      </section>
     </main>
 
     <footer>

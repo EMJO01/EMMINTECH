@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | EmminTech</title>
+  <link rel="icon" type="image/png" href="img/favicon (2).png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #007bff;
+      --secondary: #00c2ff;
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2330;
+      --border: rgba(255,255,255,0.07);
+      --text: #e6e6e6;
+      --muted: #8b949e;
+      --display: 'Syne', sans-serif;
+      --body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::after {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 1.2rem 5%;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(13,17,23,0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-family: var(--display);
+      font-size: 1.3rem; font-weight: 800;
+      color: var(--primary); letter-spacing: 2px; text-decoration: none;
+    }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    .back-link {
+      display: flex; align-items: center; gap: 7px;
+      color: var(--muted); text-decoration: none; font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--secondary); }
+    .hire-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: linear-gradient(90deg, var(--primary), #0059c2);
+      color: #fff; text-decoration: none;
+      font-size: 0.85rem; font-weight: 600;
+      padding: 0.5rem 1.2rem; border-radius: 100px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .hire-btn:hover { opacity: 0.88; transform: translateY(-1px); color: #fff; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      position: relative;
+      padding: 9rem 5% 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: 'ABOUT';
+      position: absolute;
+      top: 5.5rem; right: 2%;
+      font-family: var(--display);
+      font-size: clamp(5rem, 12vw, 10rem);
+      font-weight: 800;
+      color: rgba(0,123,255,0.04);
+      letter-spacing: -4px;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .page-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    .page-eyebrow span { width: 24px; height: 1px; background: var(--secondary); }
+
+    .page-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -2px; line-height: 1.05;
+      margin-bottom: 1.2rem;
+    }
+    .page-hero h1 em {
+      font-style: italic; font-weight: 400;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-hero p {
+      color: var(--muted); font-size: 1rem;
+      max-width: 520px; line-height: 1.8;
+    }
+
+    /* ── INTRO SPLIT ── */
+    .intro {
+      max-width: 1100px; margin: 0 auto;
+      padding: 2rem 5% 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    /* Photo side */
+    .intro-photo { position: relative; }
+
+    .photo-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .photo-frame img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+    }
+
+    /* placeholder for when user adds second photo */
+    .photo-placeholder-area {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 12px;
+      color: rgba(0,194,255,0.15);
+      font-size: 0.75rem; letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .photo-placeholder-area i { font-size: 3rem; }
+
+    /* Floating identity cards */
+    .id-card {
+      position: absolute;
+      background: rgba(22,27,34,0.95);
+      border: 1px solid rgba(0,123,255,0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 14px;
+      padding: 0.75rem 1rem;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--text);
+      white-space: nowrap;
+      animation: floatCard 3s ease-in-out infinite alternate;
+    }
+    .id-card i { color: var(--secondary); font-size: 0.95rem; }
+    .id-card--1 { top: 1.5rem; right: -1.5rem; animation-delay: 0s; }
+    .id-card--2 { bottom: 5rem; left: -1.5rem; animation-delay: 1s; }
+    .id-card--3 { bottom: 1.5rem; right: -1rem; animation-delay: 0.5s; }
+
+    @keyframes floatCard {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-8px); }
+    }
+
+    /* Corner accent */
+    .photo-frame::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      z-index: 1;
+    }
+
+    /* Text side */
+    .intro-text { display: flex; flex-direction: column; gap: 1.8rem; padding-top: 0.5rem; }
+
+    .intro-text h2 {
+      font-family: var(--display);
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+    .intro-text h2 .highlight {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .intro-text p { color: var(--muted); font-size: 0.97rem; line-height: 1.85; }
+
+    /* Hat cards — the "many hats" section */
+    .hats-grid {
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+
+    .hat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      display: flex; align-items: flex-start; gap: 1rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .hat-card:hover {
+      border-color: rgba(0,123,255,0.25);
+      background: var(--surface2);
+    }
+
+    .hat-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .hat-icon--dev  { background: rgba(0,123,255,0.1);  color: #007bff; border: 1px solid rgba(0,123,255,0.2); }
+    .hat-icon--tech { background: rgba(0,194,255,0.1);  color: #00c2ff; border: 1px solid rgba(0,194,255,0.2); }
+    .hat-icon--fin  { background: rgba(162,155,254,0.1); color: #a29bfe; border: 1px solid rgba(162,155,254,0.2); }
+
+    .hat-text h4 {
+      font-family: var(--display);
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--text); margin-bottom: 2px;
+    }
+    .hat-text p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 5%;
+    }
+    .stats-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item__number {
+      display: block;
+      font-family: var(--display);
+      font-size: 2.2rem; font-weight: 800;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .stat-item__label { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.3px; }
+
+    /* ── STORY TIMELINE ── */
+    .story {
+      max-width: 1100px; margin: 0 auto;
+      padding: 5rem 5%;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+    }
+    .section-header .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--secondary);
+      margin-bottom: 0.75rem;
+    }
+    .section-header .eyebrow span { width: 20px; height: 1px; background: var(--secondary); }
+    .section-header h2 {
+      font-family: var(--display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800; letter-spacing: -1px;
+    }
+
+    .timeline {
+      position: relative;
+      display: flex; flex-direction: column; gap: 0;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 8px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--primary), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 2.5rem 2rem;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.4rem; top: 4px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+    }
+
+    .timeline-year {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--secondary); margin-bottom: 0.4rem;
+    }
+
+    .timeline-item h3 {
+      font-family: var(--display);
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--text); margin-bottom: 0.4rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.88rem; color: var(--muted); line-height: 1.75;
+      max-width: 560px;
+    }
+
+    /* ── SKILLS ── */
+    .skills-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 5rem 5%;
+    }
+
+    .skills-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      align-items: start;
+    }
+
+    .skills-text h2 {
+      font-family: var(--display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800; letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+    .skills-text p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; }
+
+    .skills-bars { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .skill-bar { 
+      
+    }
+
+    .skill-bar__top {
+      display: flex; justify-content: space-between;
+      align-items: center; margin-bottom: 6px;
+    }
+    .skill-bar__name {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.875rem; font-weight: 500; color: var(--text);
+    }
+    .skill-bar__name i { color: var(--secondary); font-size: 0.9rem; width: 16px; }
+    .skill-bar__pct { font-size: 0.78rem; color: var(--muted); }
+
+    .skill-bar__track {
+      height: 5px; background: var(--surface2);
+      border-radius: 100px; overflow: hidden;
+    }
+    .skill-bar__fill {
+      height: 100%;
+      border-radius: 100px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform-origin: left;
+      animation: barGrow 1.2s ease forwards;
+      transform: scaleX(0);
+    }
+
+    @keyframes barGrow {
+      to { transform: scaleX(1); }
+    }
+
+    /* Tool badges */
+    .tools-grid {
+      display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem;
+    }
+    .tool-badge {
+      display: flex; align-items: center; gap: 7px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.8rem; color: var(--muted);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .tool-badge:hover { border-color: rgba(0,123,255,0.3); color: var(--text); }
+    .tool-badge i { color: var(--secondary); font-size: 0.9rem; }
+
+    /* ── VALUES ── */
+    .values {
+      max-width: 1100px; margin: 0 auto;
+      padding: 5rem 5%;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .value-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .value-card:hover {
+      border-color: rgba(0,123,255,0.25);
+      transform: translateY(-4px);
+    }
+
+    .value-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: rgba(0,123,255,0.08);
+      border: 1px solid rgba(0,123,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .value-card h3 {
+      font-family: var(--display);
+      font-size: 1rem; font-weight: 700;
+      color: var(--text); margin-bottom: 0.5rem;
+    }
+    .value-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── CTA ── */
+    .about-cta {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 5% 6rem;
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, #0f1824, #162035);
+      border: 1px solid rgba(0,123,255,0.2);
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(0,123,255,0.1), transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-card h2 {
+      font-family: var(--display);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 800; letter-spacing: -1px;
+      margin-bottom: 0.6rem;
+    }
+    .cta-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; }
+
+    .cta-btns {
+      display: flex; flex-direction: column; gap: 0.75rem; flex-shrink: 0;
+    }
+
+    .cta-btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: linear-gradient(90deg, var(--primary), #0059c2);
+      color: #fff; text-decoration: none;
+      font-weight: 700; font-size: 0.9rem;
+      padding: 0.85rem 1.8rem; border-radius: 100px;
+      box-shadow: 0 4px 24px rgba(0,123,255,0.3);
+      transition: opacity 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .cta-btn-primary:hover { opacity: 0.9; transform: translateY(-2px); color: #fff; }
+
+    .cta-btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted); text-decoration: none;
+      font-weight: 500; font-size: 0.875rem;
+      padding: 0.8rem 1.8rem; border-radius: 100px;
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .cta-btn-ghost:hover { border-color: rgba(0,194,255,0.3); color: var(--secondary); }
+
+    footer {
+      text-align: center;
+      padding: 2rem 5%;
+      border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    footer .brand { color: var(--secondary); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .intro { grid-template-columns: 1fr; gap: 3rem; }
+      .intro-photo { max-width: 360px; margin: 0 auto; }
+      .id-card--1 { right: -0.5rem; }
+      .id-card--2 { left: -0.5rem; }
+      .id-card--3 { right: 0; }
+      .stats-inner { grid-template-columns: repeat(2,1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .skills-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cta-card { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: row; flex-wrap: wrap; }
+    }
+    @media (max-width: 600px) {
+      .page-hero::before { display: none; }
+      .stats-inner { grid-template-columns: repeat(2,1fr); }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+      .cta-card { padding: 2.5rem 1.5rem; }
+      .cta-btns { flex-direction: column; }
+      .timeline { padding-left: 1.5rem; }
+      .timeline-item { padding-left: 1.5rem; }
+      .timeline-dot { left: -1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">EMMINTECH</a>
+    <div class="header-right">
+      <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Home</a>
+      <a href="getstarted.html" class="hire-btn"><i class="fa-solid fa-bolt"></i> Hire Me</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-eyebrow"><span></span> The person behind the screen</div>
+    <h1>Developer. Founder.<br><em>Problem Solver.</em></h1>
+    <p>I don't just build websites — I build digital tools that help businesses grow, brands stand out, and ideas come to life online.</p>
+  </div>
+
+  <!-- Intro Split -->
+  <section class="intro">
+
+    <!-- Photo -->
+    <div class="intro-photo">
+      <div class="photo-frame">
+        <!-- Swap this src for your second photo when ready -->
+        <img src="img/mypics.jpeg" alt="Emmanuel Joshua">
+      </div>
+      <div class="id-card id-card--1"><i class="fa-solid fa-code"></i> Web Developer</div>
+      <div class="id-card id-card--2"><i class="fa-solid fa-chart-line"></i> Financial Analyst</div>
+      <div class="id-card id-card--3"><i class="fa-solid fa-rocket"></i> Founder, Nexua</div>
+    </div>
+
+    <!-- Text -->
+    <div class="intro-text">
+      <h2>Hi, I'm Emmanuel —<br>I <span class="highlight">wear many hats</span> and<br>I own every one.</h2>
+
+      <p>I'm Emmanuel Joshua, known online as <strong>EmminTech</strong>. I'm a self-taught web developer, graphic designer, and financial analyst based in Nigeria — and the founder of <strong>Nexua</strong>, my creative tech company built to deliver digital products and futuristic solutions to businesses that want to grow online.</p>
+
+      <p>My journey started with curiosity — pulling apart websites to understand how they worked, teaching myself HTML and CSS, then JavaScript. What began as a personal interest quickly became a mission: to help businesses, brands, and entrepreneurs show up powerfully on the internet without paying agency prices.</p>
+
+      <div class="hats-grid">
+        <div class="hat-card">
+          <div class="hat-icon hat-icon--dev"><i class="fa-solid fa-code"></i></div>
+          <div class="hat-text">
+            <h4>Web Developer & Designer</h4>
+            <p>I build responsive, fast, visually stunning websites from scratch — landing pages, portfolios, business sites, and beyond.</p>
+          </div>
+        </div>
+        <div class="hat-card">
+          <div class="hat-icon hat-icon--tech"><i class="fa-solid fa-microchip"></i></div>
+          <div class="hat-text">
+            <h4>Tech Entrepreneur</h4>
+            <p>Through Nexua, I'm building digital products and services that solve real problems for Nigerian and global businesses.</p>
+          </div>
+        </div>
+        <div class="hat-card">
+          <div class="hat-icon hat-icon--fin"><i class="fa-solid fa-chart-pie"></i></div>
+          <div class="hat-text">
+            <h4>Financial Analyst</h4>
+            <p>I bring an analytical mindset to every project — understanding business goals, not just design briefs, so every site I build actually earns its keep.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-item__number">6+</span>
+        <span class="stat-item__label">Projects Shipped</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__number">5+</span>
+        <span class="stat-item__label">Happy Clients</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__number">2+</span>
+        <span class="stat-item__label">Years Building</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__number">3</span>
+        <span class="stat-item__label">Services Offered</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Timeline -->
+  <section class="story">
+    <div class="section-header">
+      <div class="eyebrow"><span></span> My journey</div>
+      <h2>How I got here</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">The Beginning</div>
+        <h3>Curiosity meets the internet</h3>
+        <p>Like most developers, it started with curiosity — inspecting web pages, tweaking HTML, wondering how the whole thing worked. I started teaching myself to code, one YouTube video and one broken div at a time.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">First Projects</div>
+        <h3>Built my first digital contact card</h3>
+        <p>My first real project — a sleek personal contact card to consolidate my online presence. It wasn't perfect, but it worked. More importantly, it showed me what was possible with just HTML and CSS.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">First Client</div>
+        <h3>Starr Fruitti — my first paid project</h3>
+        <p>Built a full landing page for a fruit store client. Seeing a real business go live with something I built from scratch was the moment everything clicked. I knew this was more than a hobby.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Founding Nexua</div>
+        <h3>Turning skills into a company</h3>
+        <p>I launched Nexua to formalise what I was already doing — building digital products for businesses. Nexua is the vehicle for everything: web development, design, hosting, and future tech innovations.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Now</div>
+        <h3>Growing, building, shipping</h3>
+        <p>6 projects live. More in the pipeline. Every project teaches me something new and brings me closer to my vision — a future where great digital work is accessible to every business, not just the ones with big budgets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills-section">
+    <div class="skills-inner">
+      <div class="skills-text">
+        <div class="section-header">
+          <div class="eyebrow"><span></span> What I work with</div>
+          <h2>Skills &<br>Tools</h2>
+        </div>
+        <p>I'm comfortable across the full front-end stack and always expanding. Every tool I use is chosen because it produces real results for clients — not just because it looks good on a CV.</p>
+        <div class="tools-grid">
+          <span class="tool-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+          <span class="tool-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span class="tool-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="tool-badge"><i class="fa-brands fa-react"></i> React</span>
+          <span class="tool-badge"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="tool-badge"><i class="fa-brands fa-figma"></i> Figma</span>
+          <span class="tool-badge"><i class="fa-brands fa-github"></i> GitHub</span>
+          <span class="tool-badge"><i class="fa-solid fa-server"></i> Netlify</span>
+        </div>
+      </div>
+
+      <div class="skills-bars">
+        <div class="skill-bar">
+          <div class="skill-bar__top">
+            <span class="skill-bar__name"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
+            <span class="skill-bar__pct">90%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" style="width:90%"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__top">
+            <span class="skill-bar__name"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="skill-bar__pct">72%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" style="width:72%"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__top">
+            <span class="skill-bar__name"><i class="fa-brands fa-figma"></i> UI / Figma</span>
+            <span class="skill-bar__pct">78%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" style="width:78%"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__top">
+            <span class="skill-bar__name"><i class="fa-brands fa-react"></i> React</span>
+            <span class="skill-bar__pct">55%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" style="width:55%"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__top">
+            <span class="skill-bar__name"><i class="fa-solid fa-paintbrush"></i> Graphics Design</span>
+            <span class="skill-bar__pct">80%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar__top">
+            <span class="skill-bar__name"><i class="fa-solid fa-chart-line"></i> Financial Analysis</span>
+            <span class="skill-bar__pct">75%</span>
+          </div>
+          <div class="skill-bar__track">
+            <div class="skill-bar__fill" style="width:75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="values">
+    <div class="section-header">
+      <div class="eyebrow"><span></span> How I work</div>
+      <h2>What you can expect<br>working with me</h2>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Clear Communication</h3>
+        <p>No ghosting, no jargon. I keep you updated at every stage so you always know where your project stands.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="fa-solid fa-clock"></i></div>
+        <h3>On-Time Delivery</h3>
+        <p>I respect your timeline. Deadlines are commitments, not suggestions — I build them into the project plan from day one.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Attention to Detail</h3>
+        <p>From pixel alignment to page speed, I sweat the small stuff so the final product feels polished and professional.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3>Business-First Thinking</h3>
+        <p>Every design decision I make has a reason — to convert visitors, build trust, or reinforce your brand. Not just to look good.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="about-cta">
+    <div class="cta-card">
+      <div>
+        <h2>Ready to work together?</h2>
+        <p>Whether you need a landing page, a full website, or a full brand refresh — I'm available for new projects. Let's build something worth showing off.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="getstarted.html" class="cta-btn-primary">
+          <i class="fa-solid fa-rocket"></i> Start a Project
+        </a>
+        <a href="work.html" class="cta-btn-ghost">
+          <i class="fa-solid fa-eye"></i> See My Work
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 <strong>EmminTech</strong> | Powered by <span class="brand">Nexua</span></p>
+  </footer>
+
+</body>
+</html>

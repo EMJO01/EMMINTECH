@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started | EmminTech</title>
+  <link rel="icon" type="image/png" href="img/favicon (2).png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #007bff;
+      --secondary: #00c2ff;
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2330;
+      --border: rgba(255,255,255,0.08);
+      --text: #e6e6e6;
+      --muted: #8b949e;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'Space Grotesk', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,123,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,123,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glow orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.18;
+    }
+    .orb-1 { width: 500px; height: 500px; background: #007bff; top: -100px; left: -150px; }
+    .orb-2 { width: 400px; height: 400px; background: #00c2ff; bottom: 0; right: -100px; }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(13,17,23,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--secondary); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 9rem 5% 5rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(0,194,255,0.3);
+      background: rgba(0,194,255,0.06);
+      color: var(--secondary);
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge span { width: 6px; height: 6px; background: var(--secondary); border-radius: 50%; animation: blink 1.5s ease-in-out infinite; }
+
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 .accent {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto 0.5rem;
+    }
+
+    /* ── PATH CARDS ── */
+    .paths {
+      position: relative;
+      z-index: 1;
+      padding: 2rem 5% 6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .paths-label {
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .paths-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .path-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .path-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .path-card:hover {
+      border-color: rgba(0,123,255,0.4);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,123,255,0.12);
+    }
+    .path-card:hover::before { opacity: 1; }
+
+    .path-card.featured {
+      border-color: rgba(0,123,255,0.35);
+      background: linear-gradient(135deg, #161b22, #1a2235);
+    }
+    .path-card.featured::before { opacity: 1; }
+
+    .featured-badge {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: rgba(0,123,255,0.15);
+      color: var(--secondary);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid rgba(0,194,255,0.2);
+    }
+
+    .path-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(0,123,255,0.1);
+      border: 1px solid rgba(0,123,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      color: var(--secondary);
+    }
+
+    .path-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .path-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .path-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary);
+      transition: gap 0.2s, color 0.2s;
+    }
+    .path-card:hover .path-cta { gap: 12px; color: var(--secondary); }
+
+    /* ── PROJECT FORM ── */
+    .form-section {
+      position: relative;
+      z-index: 1;
+      padding: 2rem 5% 6rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .form-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-header p { color: var(--muted); font-size: 0.95rem; }
+
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    input, select, textarea {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      width: 100%;
+    }
+
+    input::placeholder, textarea::placeholder { color: #4a5568; }
+
+    select option { background: var(--surface2); }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(0,123,255,0.5);
+      box-shadow: 0 0 0 3px rgba(0,123,255,0.08);
+    }
+
+    textarea { resize: vertical; min-height: 120px; }
+
+    .budget-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .budget-option { display: none; }
+    .budget-label {
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      text-align: center;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: var(--surface2);
+      color: var(--muted);
+    }
+    .budget-option:checked + .budget-label {
+      border-color: var(--primary);
+      color: var(--secondary);
+      background: rgba(0,123,255,0.1);
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: linear-gradient(90deg, var(--primary), #0059c2);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .submit-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+    .submit-btn:active { transform: scale(0.99); }
+
+    /* ── TRUST BAR ── */
+    .trust {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding: 2rem 5% 5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .trust-item i { color: var(--secondary); }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer .brand { color: var(--secondary); }
+
+    /* ── MODAL (DM) ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: var(--surface);
+      border: 1px solid rgba(0,123,255,0.25);
+      border-radius: 24px;
+      padding: 2.5rem;
+      width: 90%;
+      max-width: 480px;
+      position: relative;
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.2rem; right: 1.2rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .modal-close:hover { background: rgba(255,255,255,0.1); color: var(--text); }
+
+    .modal h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .modal p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+    .channel-btns { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .channel-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 1rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface2);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .channel-btn:hover { border-color: rgba(0,123,255,0.4); background: rgba(0,123,255,0.06); }
+    .channel-btn i { font-size: 1.2rem; width: 24px; text-align: center; }
+    .channel-btn .ch-text span { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 1px; }
+
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .form-card { padding: 1.5rem; }
+      .paths-grid { grid-template-columns: 1fr; }
+      .trust { gap: 1.5rem; flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">EMMINTECH</a>
+    <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge"><span></span> Let's build something great</div>
+    <h1>How can I help<br>you <span class="accent">grow?</span></h1>
+    <p>Pick the path that works best for you — no pressure, just the right next step.</p>
+  </section>
+
+  <!-- 3 Path Cards -->
+  <section class="paths">
+    <p class="paths-label">Choose your path</p>
+    <div class="paths-grid">
+
+      <!-- Book a Call -->
+      <a href="https://calendly.com/emmanueljoshuaaa08/30min" target="_blank" class="path-card">
+        <div class="path-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <h3>Book a Call</h3>
+        <p>Schedule a free 20-minute discovery call. We'll talk about your project, your goals, and how I can help — no commitment needed.</p>
+        <div class="path-cta">Schedule now <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+
+      <!-- Direct Message -->
+      <div class="path-card featured" onclick="openDMModal()">
+        <span class="featured-badge">Quick</span>
+        <div class="path-icon"><i class="fa-solid fa-message"></i></div>
+        <h3>Send a Message</h3>
+        <p>Have a quick question or want to introduce yourself? Reach out directly via WhatsApp, Instagram, or LinkedIn and I'll reply fast.</p>
+        <div class="path-cta">Message me <i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+
+      <!-- Start Project -->
+      <a href="#project-form" class="path-card">
+        <div class="path-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3>Start a Project</h3>
+        <p>Ready to go? Fill out the project brief below — the more detail you give, the faster we can kick things off with a clear plan and quote.</p>
+        <div class="path-cta">Fill the brief <i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Project Form -->
+  <section class="form-section" id="project-form">
+    <div class="form-header">
+      <h2>Start Your Project</h2>
+      <p>Fill in the details below and I'll get back to you within 24 hours with a plan and quote.</p>
+    </div>
+
+    <div class="form-card">
+      <form name="start-project" method="POST" data-netlify="true" action="thanks.html">
+        <input type="hidden" name="form-name" value="start-project">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Your Name</label>
+            <input type="text" id="fname" name="name" placeholder="Emmanuel Joshua" required>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fphone">WhatsApp / Phone</label>
+            <input type="tel" id="fphone" name="phone" placeholder="+234 800 000 0000">
+          </div>
+          <div class="form-group">
+            <label for="fservice">Service Needed</label>
+            <select id="fservice" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Website Design & Development</option>
+              <option>Web Hosting & Setup</option>
+              <option>Graphics Design</option>
+              <option>Portfolio Website</option>
+              <option>Landing Page</option>
+              <option>Something else</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Project Budget</label>
+          <div class="budget-grid">
+            <input type="radio" name="budget" id="b1" value="Under ₦50k" class="budget-option">
+            <label for="b1" class="budget-label">Under ₦50k</label>
+
+            <input type="radio" name="budget" id="b2" value="₦50k–₦150k" class="budget-option">
+            <label for="b2" class="budget-label">₦50k–₦150k</label>
+
+            <input type="radio" name="budget" id="b3" value="₦150k–₦500k" class="budget-option">
+            <label for="b3" class="budget-label">₦150k–₦500k</label>
+
+            <input type="radio" name="budget" id="b4" value="Let's discuss" class="budget-option">
+            <label for="b4" class="budget-label">Let's discuss</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="fdesc">Tell Me About Your Project</label>
+          <textarea id="fdesc" name="description" placeholder="Describe what you need — website for your business, a redesign, a flyer campaign, etc. The more detail the better!" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fdeadline">Preferred Timeline</label>
+          <select id="fdeadline" name="timeline">
+            <option value="" disabled selected>When do you need it?</option>
+            <option>ASAP (within 1 week)</option>
+            <option>2–4 weeks</option>
+            <option>1–2 months</option>
+            <option>Flexible — quality over speed</option>
+          </select>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <i class="fa-solid fa-paper-plane"></i> Send My Project Brief
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust">
+    <div class="trust-item"><i class="fa-solid fa-clock"></i> Response within 24 hours</div>
+    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Your info stays private</div>
+    <div class="trust-item"><i class="fa-solid fa-handshake"></i> No commitment required</div>
+    <div class="trust-item"><i class="fa-solid fa-location-dot"></i> Serving clients globally</div>
+  </div>
+
+  <footer>
+    <p>© 2025 <strong>EmminTech</strong> | Powered by <span class="brand">Nexua</span></p>
+  </footer>
+
+  <!-- DM Modal -->
+  <div class="modal-overlay" id="dmModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeDMModal()"><i class="fa-solid fa-xmark"></i></button>
+      <h3>Send a Message</h3>
+      <p>Choose where you'd like to reach out — I'm active on all of these.</p>
+      <div class="channel-btns">
+        <a href="https://wa.me/message/QVGHYLTLOJNAE1" target="_blank" class="channel-btn">
+          <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+          <div class="ch-text">WhatsApp<span>Fastest response — usually within the hour</span></div>
+        </a>
+        <a href="https://www.instagram.com/emmanuel_joshua.af/" target="_blank" class="channel-btn">
+          <i class="fab fa-instagram" style="color:#E1306C;"></i>
+          <div class="ch-text">Instagram DM<span>@emmanuel_joshua.af</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/emmajosh-/" target="_blank" class="channel-btn">
+          <i class="fab fa-linkedin" style="color:#0077B5;"></i>
+          <div class="ch-text">LinkedIn Message<span>Professional inquiries welcome</span></div>
+        </a>
+        <a href="https://x.com/Emmanue0108" target="_blank" class="channel-btn">
+          <i class="fab fa-x-twitter" style="color:#e6e6e6;"></i>
+          <div class="ch-text">X (Twitter) DM<span>@Emmanue0108</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openDMModal() {
+      document.getElementById('dmModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDMModal() {
+      document.getElementById('dmModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('dmModal').addEventListener('click', function(e) {
+      if (e.target === this) closeDMModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDMModal(); });
+  </script>
+
+</body>
+</html>
