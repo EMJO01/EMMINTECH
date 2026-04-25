@@ -1405,12 +1405,6 @@ a:hover {
     padding: 8rem 1rem;
   }
 
-  #hero img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
-
   #hero h1 {
     font-size: 1.6rem;
   }
@@ -1446,19 +1440,10 @@ a:hover {
     font-size: 0.9rem;
     text-align: center;
   }
-
-  .project-card img{
-    width: 200px;
-    height: 200px;
-  }
 }
 
 /* Smaller phones */
 @media (max-width: 480px) {
-  #hero img {
-    width: 120px;
-    height: 120px;
-  }
 
   header h2.logo {
     font-size: 1.2rem;
@@ -1480,10 +1465,6 @@ a:hover {
   #project{
     justify-content: center;
     align-items: center;
-  }
-  .project-card img{
-    width: 250px;
-    height: 250px;
   }
 }
 
