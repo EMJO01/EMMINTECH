@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 (function(){
-      const roles=["Web Developer","Tech Innovator","Financial Analyst","Founder of Nexua","Graphics Designer"];
+      const roles=["Web Developer","Tech Innovator","Financial Analyst","Founder of Nexua", "Frontend Developer","Graphics Designer"];
       const el=document.getElementById("typing-text");
       if(!el)return;
       let ri=0,ci=0,del=false;
