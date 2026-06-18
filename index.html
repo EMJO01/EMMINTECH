@@ -3,30 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Open Graph (for Facebook, WhatsApp, etc.) -->
-    <meta property="og:title" content="E.I.T - Tech & Innovation" />
-    <meta property="og:description" content="Explore my portfolio — web development, graphics design, and creative tech projects by E.I.T." />
-    <meta property="og:image" content="https://eminntech.com/img/og-image.jpg" />
-    <meta property="og:url" content="https://eminntech.com/" />
-    <meta property="og:type" content="website" />
 
-    <!-- Twitter Card (for X / Twitter) -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="E.I.T - Tech & Innovation" />
-    <meta name="twitter:description" content="Explore my portfolio — web development, graphics design, and creative tech projects by E.I.T." />
-    <meta name="twitter:image" content="https://eminntech.com/img/og-image.jpg" />
-    <meta name="twitter:url" content="https://eminntech.com/" />
+    <!-- Primary SEO -->
+    <title>EminnTech | Web Developer, AI Automation & Design — Nigeria</title>
+    <meta name="description" content="Emmanuel Joshua (EminnTech) — self-taught web developer, AI automation builder, and graphic designer. I build websites, WhatsApp AI bots, and digital tools that help businesses grow. Based in Nigeria, serving clients globally.">
+    <meta name="keywords" content="web developer Nigeria, AI automation Nigeria, WhatsApp bot developer, EminnTech, Emmanuel Joshua, Nexua, landing page designer, freelance web developer">
+    <meta name="author" content="Emmanuel Joshua — EminnTech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eminntech.com/">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eminntech.com/">
+    <meta property="og:title" content="EminnTech | Web Developer & AI Automation — Nigeria">
+    <meta property="og:description" content="I build websites, WhatsApp AI bots, and digital experiences that help businesses grow online — through Nexua.">
+    <meta property="og:image" content="https://eminntech.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="EminnTech">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://eminntech.com/">
+    <meta name="twitter:title" content="EminnTech | Web Developer & AI Automation — Nigeria">
+    <meta name="twitter:description" content="I build websites, WhatsApp AI bots, and digital experiences that help businesses grow online — through Nexua.">
+    <meta name="twitter:image" content="https://eminntech.com/img/og-image.png">
+    <meta name="twitter:creator" content="@Emmanue0108">
+    <meta name="twitter:site" content="@Emmanue0108">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon (2).png">
+
+    <!-- Facebook domain verification (keep your existing one) -->
+    <meta name="facebook-domain-verification" content="2681vgzn1yrkx4unkc73h2eynrs5yr">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="img/favicon (2).png">
-    <title>EmminTech | Web Developer Portfolio</title>
-    <meta name="description" content="EmminTech - Web developer, designer and tech creator.">
-    <meta name="facebook-domain-verification" content="2681vgzn1yrkx4unkc73h2eynrs5yr" />
-</head>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emmanuel Joshua",
+        "alternateName": "EminnTech",
+        "url": "https://eminntech.com",
+        "image": "https://eminntech.com/img/about.jpeg",
+        "jobTitle": "Web Developer & AI Automation Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Nexua",
+          "url": "https://eminntech.com"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ibadan",
+          "addressCountry": "NG"
+        },
+        "sameAs": [
+          "https://www.instagram.com/emminntech/",
+          "https://www.linkedin.com/in/emmajosh-/",
+          "https://github.com/EMJO01",
+          "https://x.com/Emmanue0108",
+          "https://www.tiktok.com/@daylight.366"
+        ],
+        "knowsAbout": [
+          "Web Development",
+          "AI Automation",
+          "WhatsApp Bots",
+          "Graphic Design",
+          "Node.js",
+          "React",
+          "Supabase"
+        ]
+      }
+</script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8ZELYGDL8"></script>
@@ -37,51 +91,76 @@
 
   gtag('config', 'G-S8ZELYGDL8');
 </script>
+</head>
 
 <body>
-    <header>
-        <h2 class="logo">EMINNTECH</h2>
-        <nav>
-            <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header id="main-header">
+      <!-- Left: Logo -->
+      <a href="index.html" class="logo">EMINNTECH</a>
+
+      <!-- Center: Nav -->
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+
+      <!-- Right: CTA + Hamburger -->
+      <div class="header-right">
+        <a href="getstarted.html" class="header-cta">
+          Hire Me <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav__close" id="mobileClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#hero"      onclick="closeMobileNav()">Home</a>
+        <a href="about.html" onclick="closeMobileNav()">About</a>
+        <a href="work.html"  onclick="closeMobileNav()">Projects</a>
+        <a href="#skills"   onclick="closeMobileNav()">Skills</a>
+        <a href="#Contact"  onclick="closeMobileNav()">Contact</a>
+        <a href="getstarted.html" class="mobile-cta-link" onclick="closeMobileNav()">
+          <i class="fa-solid fa-bolt"></i> Hire Me
+        </a>
+      </div>
+      <div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
     </header>
 
     <main>
     <section id="hero">
-    <div class="hero-bg">
-      <div class="hero-orb hero-orb--1"></div>
-      <div class="hero-orb hero-orb--2"></div>
-      <div class="hero-grid"></div>
-    </div>
- 
-    <div class="hero-inner">
-      <div class="hero-text">
+
+      <!-- LEFT: Text content -->
+      <div class="hero-content">
+
         <div class="hero-status">
           <span class="status-dot"></span>
           Available for new projects
         </div>
- 
+
         <h1 class="hero-name">
           Hi, I'm<br>
           <span class="hero-name--accent">Emmanuel</span><br>
           Joshua
         </h1>
- 
+
         <p class="hero-roles">
           <span id="typing-text"></span><span class="cursor">|</span>
         </p>
- 
+
         <p class="hero-bio">
           I build websites, craft digital experiences, and create visual identities
-          that help businesses grow — through my company <strong class="nexua-brand">Nexua</strong>.
+          that help businesses grow — through my company
+          <strong class="nexua-brand">Nexua</strong>.
         </p>
- 
+
         <div class="hero-actions">
           <a href="getstarted.html" target="_blank" class="btn-primary">
             Get Started
@@ -97,10 +176,10 @@
             Resume
           </a>
         </div>
- 
+
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-number">3+</span>
+            <span class="stat-number">12+</span>
             <span class="stat-label">Projects</span>
           </div>
           <div class="stat-divider"></div>
@@ -114,23 +193,29 @@
             <span class="stat-label">Years Building</span>
           </div>
         </div>
-      </div>
- 
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-ring hero-photo-ring--outer"></div>
-        <div class="hero-photo-ring hero-photo-ring--inner"></div>
-        <div class="hero-photo-frame">
-          <img src="img/mypics.jpeg" alt="Emmanuel Joshua">
+
+        <!-- Floating skill badges — inside content column -->
+        <div class="hero-badges">
+          <div class="hero-badge"><span>⚡</span> Web Dev</div>
+          <div class="hero-badge"><span>🎨</span> Design</div>
+          <div class="hero-badge"><span>🤖</span> AI & Automation</div>
         </div>
-        <div class="hero-badge-float hero-badge-float--tl">⚡ Web Dev</div>
-        <div class="hero-badge-float hero-badge-float--br">🎨 Design</div>
+
       </div>
-    </div>
- 
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
+
+      <!-- RIGHT: Full-bleed photo -->
+      <div class="hero-photo">
+        <img src="img/mypics.jpeg" alt="Emmanuel Joshua — Web Developer & Founder of Nexua">
+        <!-- Gradient fade from photo into background -->
+        <div class="hero-photo__fade"></div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+
     </section>
 
     <section id="about">
@@ -173,10 +258,10 @@
         <div class="about-photo">
           <div class="about-photo-ring"></div>
           <div class="about-photo-frame">
-            <img src="img/mypics.jpeg" alt="Emmanuel Joshua">
+            <img src="img/about.jpeg" alt="Emmanuel Joshua">
           </div>
           <div class="about-stat-card about-stat-card--1">
-            <span class="asc-number">6+</span>
+            <span class="asc-number">12+</span>
             <span class="asc-label">Projects Shipped</span>
           </div>
           <div class="about-stat-card about-stat-card--2">
@@ -328,109 +413,142 @@
     </section>
 
     <section id="skills">
+
       <div class="skills-header">
         <div class="skills-eyebrow"><span></span> What I work with</div>
         <h2>Skills & Tools</h2>
-        <p>The technologies I use to design, build, and ship digital products that work.</p>
+        <p>From frontend design to backend APIs, AI integration, and DevOps — here's the full stack.</p>
       </div>
-    
-      <div class="skills-body">
-    
-        <!-- Left: icon grid -->
-        <div class="skill-icons-grid">
-          <div class="skill-icon-card">
-            <i class="fa-brands fa-html5"></i>
-            <span>HTML5</span>
+
+      <!-- ── CATEGORY CARDS ── -->
+      <div class="skill-categories">
+
+        <div class="skill-cat">
+          <div class="skill-cat__icon skill-cat__icon--blue">
+            <i class="fa-solid fa-display"></i>
           </div>
-          <div class="skill-icon-card">
-            <i class="fa-brands fa-css3-alt"></i>
-            <span>CSS3</span>
-          </div>
-          <div class="skill-icon-card">
-            <i class="fa-brands fa-js"></i>
-            <span>JavaScript</span>
-          </div>
-          <div class="skill-icon-card">
-            <i class="fa-brands fa-react"></i>
-            <span>React</span>
-          </div>
-          <div class="skill-icon-card">
-            <i class="fa-brands fa-python"></i>
-            <span>Python</span>
-          </div>
-          <div class="skill-icon-card">
-            <i class="fa-brands fa-figma"></i>
-            <span>Figma</span>
-          </div>
-          <div class="skill-icon-card">
-            <i class="fa-brands fa-github"></i>
-            <span>GitHub</span>
-          </div>
-          <div class="skill-icon-card">
-            <i class="fa-brands fa-upwork"></i>
-            <span>Upwork</span>
+          <h3>Frontend</h3>
+          <div class="skill-cat__tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            <span>React</span><span>Figma</span><span>SPA Design</span>
+            <span>Real-time Polling</span><span>localStorage</span>
           </div>
         </div>
-    
-        <!-- Right: progress bars -->
+
+        <div class="skill-cat">
+          <div class="skill-cat__icon skill-cat__icon--green">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3>Backend</h3>
+          <div class="skill-cat__tags">
+            <span>Node.js</span><span>Express.js</span><span>REST API</span>
+            <span>Supabase</span><span>PostgreSQL</span><span>Baileys</span>
+            <span>Multi-tenant</span><span>Webhooks</span>
+          </div>
+        </div>
+
+        <div class="skill-cat">
+          <div class="skill-cat__icon skill-cat__icon--pink">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3>AI & Automation</h3>
+          <div class="skill-cat__tags">
+            <span>Claude API</span><span>Prompt Engineering</span>
+            <span>Conversation Memory</span><span>Intent Detection</span>
+            <span>Structured Output</span><span>WhatsApp AI</span>
+            <span>Re-engagement Logic</span>
+          </div>
+        </div>
+
+        <div class="skill-cat">
+          <div class="skill-cat__icon skill-cat__icon--orange">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <h3>DevOps & Tools</h3>
+          <div class="skill-cat__tags">
+            <span>Render</span><span>Netlify</span><span>GitHub</span>
+            <span>UptimeRobot</span><span>Env Secrets</span>
+            <span>Fault Tolerance</span><span>Python</span><span>Upwork</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── ICON GRID + PROGRESS BARS ── -->
+      <div class="skills-body">
+
+        <div class="skill-icons-grid">
+          <div class="skill-icon-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+          <div class="skill-icon-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+          <div class="skill-icon-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+          <div class="skill-icon-card"><i class="fa-brands fa-react"></i><span>React</span></div>
+          <div class="skill-icon-card"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+          <div class="skill-icon-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
+          <div class="skill-icon-card"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+          <div class="skill-icon-card"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+        </div>
+
         <div class="skill-bars">
           <div class="skill-bar">
             <div class="skill-bar__top">
               <span class="skill-bar__name"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
               <span class="skill-bar__pct">90%</span>
             </div>
-            <div class="skill-bar__track">
-              <div class="skill-bar__fill" style="--w:90%"></div>
-            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:90%"></div></div>
           </div>
           <div class="skill-bar">
             <div class="skill-bar__top">
               <span class="skill-bar__name"><i class="fa-brands fa-js"></i> JavaScript</span>
-              <span class="skill-bar__pct">72%</span>
+              <span class="skill-bar__pct">75%</span>
             </div>
-            <div class="skill-bar__track">
-              <div class="skill-bar__fill" style="--w:72%"></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:75%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-brands fa-node-js"></i> Node.js / Express</span>
+              <span class="skill-bar__pct">70%</span>
             </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-solid fa-robot"></i> AI Integration</span>
+              <span class="skill-bar__pct">78%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:78%"></div></div>
           </div>
           <div class="skill-bar">
             <div class="skill-bar__top">
               <span class="skill-bar__name"><i class="fa-brands fa-react"></i> React</span>
-              <span class="skill-bar__pct">55%</span>
+              <span class="skill-bar__pct">60%</span>
             </div>
-            <div class="skill-bar__track">
-              <div class="skill-bar__fill" style="--w:55%"></div>
-            </div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar__top">
-              <span class="skill-bar__name"><i class="fa-brands fa-figma"></i> UI / Figma</span>
-              <span class="skill-bar__pct">78%</span>
-            </div>
-            <div class="skill-bar__track">
-              <div class="skill-bar__fill" style="--w:78%"></div>
-            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:60%"></div></div>
           </div>
           <div class="skill-bar">
             <div class="skill-bar__top">
               <span class="skill-bar__name"><i class="fa-solid fa-paintbrush"></i> Graphics Design</span>
               <span class="skill-bar__pct">80%</span>
             </div>
-            <div class="skill-bar__track">
-              <div class="skill-bar__fill" style="--w:80%"></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__top">
+              <span class="skill-bar__name"><i class="fa-solid fa-database"></i> Supabase / SQL</span>
+              <span class="skill-bar__pct">68%</span>
             </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:68%"></div></div>
           </div>
           <div class="skill-bar">
             <div class="skill-bar__top">
               <span class="skill-bar__name"><i class="fa-solid fa-chart-line"></i> Financial Analysis</span>
               <span class="skill-bar__pct">75%</span>
             </div>
-            <div class="skill-bar__track">
-              <div class="skill-bar__fill" style="--w:75%"></div>
-            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" style="--w:75%"></div></div>
           </div>
         </div>
-    
+
       </div>
+
     </section>
 
     <section id="service">
@@ -504,156 +622,193 @@
     </section>
 
     <section id="pricing">
+
       <div class="pricing-header">
         <span class="pricing-eyebrow">Transparent Pricing</span>
         <h2>Simple, Honest Rates</h2>
-        <p>No hidden fees. No surprises. Pick a plan that fits your project — or reach out for a custom quote.</p>
+        <p>From a clean landing page to a full AI-powered SaaS — there's a plan for every stage of your business.</p>
       </div>
 
+      <!-- ── TIER CARDS ── -->
       <div class="pricing-grid">
+
+        <!-- STARTER -->
         <div class="pricing-card">
-          <div class="pricing-card__top">
-            <div class="pricing-tier-icon"><i class="fa-solid fa-seedling"></i></div>
-              <h3>Starter</h3>
-              <p class="pricing-desc">Perfect for individuals, startups, and small businesses who need a clean online presence fast.</p>
-              <div class="pricing-amount">
-                <span class="pricing-from">from</span>
-                <span class="pricing-currency">₦</span>
-                <span class="pricing-figure">50,000</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> 1–3 page responsive website</li>
-              <li><i class="fa-solid fa-check"></i> Mobile-friendly design</li>
-              <li><i class="fa-solid fa-check"></i> Contact form integration</li>
-              <li><i class="fa-solid fa-check"></i> Basic SEO setup</li>
-              <li><i class="fa-solid fa-check"></i> 1 round of revisions</li>
-              <li><i class="fa-solid fa-check"></i> Delivery in 5–7 days</li>
-              <li class="pricing-feature--off"><i class="fa-solid fa-xmark"></i> Hosting setup</li>
-              <li class="pricing-feature--off"><i class="fa-solid fa-xmark"></i> Graphics design</li>
-            </ul>
-            <a href="getstarted.html" class="pricing-cta pricing-cta--ghost">Get Started</a>
+          <div class="pricing-card__bar pricing-card__bar--blue"></div>
+          <div class="pricing-tier-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Starter</h3>
+          <p class="pricing-desc">For individuals and small businesses needing a clean, fast online presence.</p>
+          <div class="pricing-amount">
+            <span class="pricing-from">from</span>
+            <span class="pricing-currency">₦</span>
+            <span class="pricing-figure">50,000</span>
           </div>
-
-          <div class="pricing-card pricing-card--featured">
-            <span class="pricing-popular">Most Popular</span>
-            <div class="pricing-card__top">
-              <div class="pricing-tier-icon pricing-tier-icon--featured"><i class="fa-solid fa-rocket"></i></div>
-              <h3>Growth</h3>
-              <p class="pricing-desc">For businesses that want a full professional web presence with design, hosting, and branding.</p>
-              <div class="pricing-amount">
-                <span class="pricing-from">from</span>
-                <span class="pricing-currency">₦</span>
-                <span class="pricing-figure">150,000</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> 5–8 page custom website</li>
-              <li><i class="fa-solid fa-check"></i> Mobile-first responsive design</li>
-              <li><i class="fa-solid fa-check"></i> Contact & inquiry forms</li>
-              <li><i class="fa-solid fa-check"></i> Full SEO optimization</li>
-              <li><i class="fa-solid fa-check"></i> 3 rounds of revisions</li>
-              <li><i class="fa-solid fa-check"></i> Hosting & domain setup</li>
-              <li><i class="fa-solid fa-check"></i> Logo + brand graphics</li>
-              <li><i class="fa-solid fa-check"></i> Delivery in 10–14 days</li>
-            </ul>
-            <a href="getstarted.html" class="pricing-cta pricing-cta--primary">Get Started</a>
-          </div>
-
-          <div class="pricing-card">
-            <div class="pricing-card__top">
-              <div class="pricing-tier-icon"><i class="fa-solid fa-gem"></i></div>
-              <h3>Custom</h3>
-              <p class="pricing-desc">Large projects, web apps, e-commerce, ongoing retainers, or anything that needs a tailored approach.</p>
-              <div class="pricing-amount pricing-amount--custom">
-                <span class="pricing-figure">Let's Talk</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> Unlimited pages & features</li>
-              <li><i class="fa-solid fa-check"></i> Custom web app / e-commerce</li>
-              <li><i class="fa-solid fa-check"></i> Full branding package</li>
-              <li><i class="fa-solid fa-check"></i> Priority delivery</li>
-              <li><i class="fa-solid fa-check"></i> Unlimited revisions</li>
-              <li><i class="fa-solid fa-check"></i> Monthly maintenance option</li>
-              <li><i class="fa-solid fa-check"></i> Dedicated support</li>
-              <li><i class="fa-solid fa-check"></i> Timeline agreed upfront</li>
-            </ul>
-            <a href="getstarted.html" class="pricing-cta pricing-cta--ghost">Book a Call</a>
-          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> 1–3 page responsive website</li>
+            <li><i class="fa-solid fa-check"></i> Mobile-first design</li>
+            <li><i class="fa-solid fa-check"></i> Contact form integration</li>
+            <li><i class="fa-solid fa-check"></i> Basic SEO setup</li>
+            <li><i class="fa-solid fa-check"></i> 1 round of revisions</li>
+            <li><i class="fa-solid fa-check"></i> Delivered in 5–7 days</li>
+            <li class="pricing-feature--off"><i class="fa-solid fa-xmark"></i> Hosting setup</li>
+            <li class="pricing-feature--off"><i class="fa-solid fa-xmark"></i> Backend / API</li>
+          </ul>
+          <a href="getstarted.html" class="pricing-cta pricing-cta--ghost">Get Started</a>
         </div>
 
-        <div class="pricing-breakdown">
-          <h3 class="pricing-breakdown__title">Individual Service Rates</h3>
-          <p class="pricing-breakdown__sub">Need just one thing done? Here's what each service costs on its own.</p>
-          <div class="pricing-table-wrap">
-            <table class="pricing-table">
-              <thead>
-                <tr>
-                  <th>Service</th>
-                  <th>What's Included</th>
-                  <th>Turnaround</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="service-name"><i class="fa-solid fa-file-code"></i> Landing Page</span></td>
-                  <td>1–2 pages, responsive, contact form, basic SEO</td>
-                  <td>3–5 days</td>
-                  <td class="price-cell">₦30,000 – ₦60,000</td>
-                </tr>
-                <tr>
-                  <td><span class="service-name"><i class="fa-solid fa-globe"></i> Business Website</span></td>
-                  <td>3–5 pages, custom design, mobile-first, SEO</td>
-                  <td>7–10 days</td>
-                  <td class="price-cell">₦80,000 – ₦150,000</td>
-                </tr>
-                <tr>
-                  <td><span class="service-name"><i class="fa-solid fa-user-circle"></i> Portfolio Website</span></td>
-                  <td>Personal or creative portfolio, project showcase</td>
-                  <td>5–7 days</td>
-                  <td class="price-cell">₦50,000 – ₦100,000</td>
-                </tr>
-                <tr>
-                  <td><span class="service-name"><i class="fa-solid fa-server"></i> Web Hosting Setup</span></td>
-                  <td>Domain + hosting config, SSL, Netlify/cPanel deploy</td>
-                  <td>1–2 days</td>
-                  <td class="price-cell">₦20,000 – ₦40,000</td>
-                </tr>
-                <tr>
-                  <td><span class="service-name"><i class="fa-solid fa-image"></i> Flyer / Poster</span></td>
-                  <td>1 design, print & digital ready, 1 revision</td>
-                  <td>24–48 hrs</td>
-                  <td class="price-cell">₦10,000 – ₦25,000</td>
-                </tr>
-                <tr>
-                  <td><span class="service-name"><i class="fa-solid fa-copyright"></i> Logo Design</span></td>
-                  <td>2 concepts, source files (PNG, SVG), 2 revisions</td>
-                  <td>3–5 days</td>
-                  <td class="price-cell">₦30,000 – ₦80,000</td>
-                </tr>
-                <tr>
-                  <td><span class="service-name"><i class="fa-solid fa-icons"></i> Social Media Kit</span></td>
-                  <td>5 branded templates (posts, stories, covers)</td>
-                  <td>3–4 days</td>
-                  <td class="price-cell">₦25,000 – ₦50,000</td>
-                </tr>
-                <tr class="pricing-table__cta-row">
-                  <td colspan="4">
-                    <span>Don't see your project here?</span>
-                    <a href="getstarted.html" target="_blank">Get a custom quote →</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        <!-- GROWTH (featured) -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__bar pricing-card__bar--gradient"></div>
+          <span class="pricing-popular">Most Popular</span>
+          <div class="pricing-tier-icon pricing-tier-icon--featured"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Growth</h3>
+          <p class="pricing-desc">Full professional web presence — custom design, hosting, branding, and more.</p>
+          <div class="pricing-amount">
+            <span class="pricing-from">from</span>
+            <span class="pricing-currency">₦</span>
+            <span class="pricing-figure">150,000</span>
           </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> 5–8 page custom website</li>
+            <li><i class="fa-solid fa-check"></i> Mobile-first responsive design</li>
+            <li><i class="fa-solid fa-check"></i> Contact & inquiry forms</li>
+            <li><i class="fa-solid fa-check"></i> Full SEO optimization</li>
+            <li><i class="fa-solid fa-check"></i> 3 rounds of revisions</li>
+            <li><i class="fa-solid fa-check"></i> Hosting & domain setup</li>
+            <li><i class="fa-solid fa-check"></i> Logo + brand graphics</li>
+            <li><i class="fa-solid fa-check"></i> Delivered in 10–14 days</li>
+          </ul>
+          <a href="getstarted.html" class="pricing-cta pricing-cta--primary">Get Started</a>
         </div>
 
-        <div class="pricing-note">
-          <i class="fa-solid fa-circle-info"></i>
-          All prices are in Nigerian Naira (₦). International clients are billed in USD at equivalent rates. A 50% deposit is required to begin any project.
+        <!-- AI AUTOMATION (new) -->
+        <div class="pricing-card pricing-card--ai">
+          <div class="pricing-card__bar pricing-card__bar--pink"></div>
+          <span class="pricing-badge-new">New</span>
+          <div class="pricing-tier-icon pricing-tier-icon--ai"><i class="fa-solid fa-robot"></i></div>
+          <h3>AI Automation</h3>
+          <p class="pricing-desc">WhatsApp AI bots, automated ordering systems, and custom AI integrations for your business.</p>
+          <div class="pricing-amount">
+            <span class="pricing-from">from</span>
+            <span class="pricing-currency">₦</span>
+            <span class="pricing-figure">300,000</span>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> WhatsApp AI ordering bot</li>
+            <li><i class="fa-solid fa-check"></i> Custom AI conversation flows</li>
+            <li><i class="fa-solid fa-check"></i> Vendor dashboard & order tracking</li>
+            <li><i class="fa-solid fa-check"></i> Automated customer follow-ups</li>
+            <li><i class="fa-solid fa-check"></i> Supabase database setup</li>
+            <li><i class="fa-solid fa-check"></i> Deployment & hosting config</li>
+            <li><i class="fa-solid fa-check"></i> 30-day post-launch support</li>
+            <li><i class="fa-solid fa-check"></i> Timeline agreed upfront</li>
+          </ul>
+          <a href="getstarted.html" class="pricing-cta pricing-cta--ai">Get Started</a>
         </div>
+
+        <!-- CUSTOM -->
+        <div class="pricing-card">
+          <div class="pricing-card__bar pricing-card__bar--purple"></div>
+          <div class="pricing-tier-icon pricing-tier-icon--purple"><i class="fa-solid fa-gem"></i></div>
+          <h3>Custom</h3>
+          <p class="pricing-desc">Large-scale projects, SaaS products, e-commerce, retainers — fully tailored.</p>
+          <div class="pricing-amount pricing-amount--custom">
+            <span class="pricing-figure">Let's Talk</span>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Full-stack web applications</li>
+            <li><i class="fa-solid fa-check"></i> Multi-vendor SaaS products</li>
+            <li><i class="fa-solid fa-check"></i> E-commerce & payment integration</li>
+            <li><i class="fa-solid fa-check"></i> Full branding package</li>
+            <li><i class="fa-solid fa-check"></i> Unlimited revisions</li>
+            <li><i class="fa-solid fa-check"></i> Monthly maintenance option</li>
+            <li><i class="fa-solid fa-check"></i> Priority support</li>
+            <li><i class="fa-solid fa-check"></i> Timeline agreed upfront</li>
+          </ul>
+          <a href="getstarted.html" class="pricing-cta pricing-cta--ghost">Book a Call</a>
+        </div>
+
+      </div>
+
+      <!-- ── SERVICE BREAKDOWN TABLE ── -->
+      <div class="pricing-breakdown">
+        <h3 class="pricing-breakdown__title">Individual Service Rates</h3>
+        <p class="pricing-breakdown__sub">Need just one specific thing? Here's what each service costs on its own.</p>
+        <div class="pricing-table-wrap">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>What's Included</th>
+                <th>Turnaround</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="service-name"><i class="fa-solid fa-file-code"></i> Landing Page</span></td>
+                <td>1–2 pages, responsive, contact form, basic SEO</td>
+                <td>3–5 days</td>
+                <td class="price-cell">₦50,000 – ₦80,000</td>
+              </tr>
+              <tr>
+                <td><span class="service-name"><i class="fa-solid fa-globe"></i> Business Website</span></td>
+                <td>3–5 pages, custom design, mobile-first, SEO</td>
+                <td>7–10 days</td>
+                <td class="price-cell">₦100,000 – ₦200,000</td>
+              </tr>
+              <tr>
+                <td><span class="service-name"><i class="fa-solid fa-user-circle"></i> Portfolio Website</span></td>
+                <td>Personal or creative portfolio, project showcase</td>
+                <td>5–7 days</td>
+                <td class="price-cell">₦80,000 – ₦150,000</td>
+              </tr>
+              <tr>
+                <td><span class="service-name"><i class="fa-solid fa-robot"></i> WhatsApp AI Bot</span></td>
+                <td>AI ordering bot, conversation flow, Supabase DB, dashboard</td>
+                <td>2–4 weeks</td>
+                <td class="price-cell">₦300,000 – ₦600,000</td>
+              </tr>
+              <tr>
+                <td><span class="service-name"><i class="fa-solid fa-server"></i> Web Hosting Setup</span></td>
+                <td>Domain + hosting config, SSL, Netlify/Render deploy</td>
+                <td>1–2 days</td>
+                <td class="price-cell">₦30,000 – ₦60,000</td>
+              </tr>
+              <tr>
+                <td><span class="service-name"><i class="fa-solid fa-copyright"></i> Logo Design</span></td>
+                <td>2 concepts, source files (PNG, SVG), 2 revisions</td>
+                <td>3–5 days</td>
+                <td class="price-cell">₦40,000 – ₦100,000</td>
+              </tr>
+              <tr>
+                <td><span class="service-name"><i class="fa-solid fa-image"></i> Flyer / Poster</span></td>
+                <td>1 design, print & digital ready, 1 revision</td>
+                <td>24–48 hrs</td>
+                <td class="price-cell">₦15,000 – ₦30,000</td>
+              </tr>
+              <tr>
+                <td><span class="service-name"><i class="fa-solid fa-icons"></i> Social Media Kit</span></td>
+                <td>5 branded templates (posts, stories, covers)</td>
+                <td>3–4 days</td>
+                <td class="price-cell">₦30,000 – ₦60,000</td>
+              </tr>
+              <tr class="pricing-table__cta-row">
+                <td colspan="4">
+                  <span>Don't see what you need?</span>
+                  <a href="getstarted.html" target="_blank">Get a custom quote →</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="pricing-note">
+        <i class="fa-solid fa-circle-info"></i>
+        All prices are in Nigerian Naira (₦). International clients are billed in USD at equivalent rates. A 50% deposit is required to begin any project.
+      </div>
+
     </section>
 
     <section id="hire-me">
@@ -799,7 +954,7 @@
               </div>
               <i class="fa-solid fa-arrow-right contact-link__arrow"></i>
             </a>
-            <a href="https://www.instagram.com/emminntech/" target="_blank" class="contact-link contact-link--instagram">
+            <a href="https://www.instagram.com/eminn_tech/?__pwa=1#" target="_blank" class="contact-link contact-link--instagram">
               <div class="contact-link__icon"><i class="fab fa-instagram"></i></div>
               <div class="contact-link__text">
                 <strong>Instagram</strong>
@@ -835,7 +990,7 @@
               <div class="contact-link__icon"><i class="fab fa-tiktok"></i></div>
               <div class="contact-link__text">
                 <strong>TikTok</strong>
-                <span>@josh.exe1</span>
+                <span> @daylight.366</span>
               </div>
               <i class="fa-solid fa-arrow-right contact-link__arrow"></i>
             </a>
@@ -845,9 +1000,72 @@
       </section>
     </main>
 
-    <footer>
-        <p>© 2025 <strong>EminnTech</strong> | Powered by <span class="brand">Nexua</span></p>
+    <!-- WhatsApp Float -->
+    <div class="wa-float" id="waFloat">
+      <a href="https://wa.me/message/QVGHYLTLOJNAE1" target="_blank" class="wa-float__btn" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white" width="26" height="26">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="wa-float__tooltip">Chat on WhatsApp</span>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">EMINNTECH</a>
+          <p>Building websites, AI tools, and digital experiences that help businesses grow online. Based in Nigeria, serving clients globally.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/message/QVGHYLTLOJNAE1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/eminn_tech/?__pwa=1#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/emmajosh-/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Emmanue0108" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://github.com/EMJO01" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.tiktok.com/@daylight.366" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Nav column -->
+        <div class="footer-nav">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="work.html">Projects</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#Contact">Contact</a>
+        </div>
+
+        <!-- Services column -->
+        <div class="footer-nav">
+          <h4>Services</h4>
+          <a href="getstarted.html">Website Development</a>
+          <a href="getstarted.html">Web Hosting & Setup</a>
+          <a href="getstarted.html">Graphics Design</a>
+          <a href="getstarted.html">WhatsApp AI Bot</a>
+          <a href="getstarted.html">Custom Projects</a>
+        </div>
+
+        <!-- CTA column -->
+        <div class="footer-cta">
+          <h4>Ready to build?</h4>
+          <p>Got a project in mind? Let's talk about it.</p>
+          <a href="getstarted.html" class="footer-cta-btn">
+            <i class="fa-solid fa-bolt"></i> Start a Project
+          </a>
+          <a href="https://eminntech.com/resume/my%20resume%20(2).pdf" target="_blank" class="footer-resume-link">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>© 2026 <strong>EminnTech</strong> | Powered by <span class="footer-brand-name">Nexua</span></p>
         <p class="footer-tagline">Welcome To The Future 🚀</p>
+      </div>
     </footer>
 <script src="main.js"></script>
 </body>

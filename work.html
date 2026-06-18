@@ -3,7 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | EminnTech</title>
+
+  <!-- Primary SEO -->
+  <title>Projects & Portfolio | EminnTech — Web Dev, AI & Design Work</title>
+  <meta name="description" content="Browse 11+ projects by Emmanuel Joshua (EminnTech) — landing pages, business websites, WhatsApp AI bots, brand identities, and more. Built for clients in Nigeria and globally.">
+  <meta name="keywords" content="EminnTech portfolio, web development projects Nigeria, WhatsApp AI bot, landing page Nigeria, Emmanuel Joshua projects, Nexua work">
+  <meta name="author" content="Emmanuel Joshua — EminnTech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://eminntech.com/work.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eminntech.com/work.html">
+  <meta property="og:title" content="Projects & Portfolio | EminnTech — 11+ Live Projects">
+  <meta property="og:description" content="Browse 11+ projects — landing pages, business websites, WhatsApp AI bots, and brand identities built for clients in Nigeria and globally.">
+  <meta property="og:image" content="https://eminntech.com/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="EminnTech">
+  <meta property="og:locale" content="en_NG">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://eminntech.com/work.html">
+  <meta name="twitter:title" content="Projects & Portfolio | EminnTech — 11+ Live Projects">
+  <meta name="twitter:description" content="Browse 11+ projects — landing pages, business websites, WhatsApp AI bots, and brand identities built for clients in Nigeria and globally.">
+  <meta name="twitter:image" content="https://eminntech.com/img/og-image.png">
+  <meta name="twitter:creator" content="@Emmanue0108">
+  <meta name="twitter:site" content="@Emmanue0108">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon (2).png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,8 +165,250 @@
     .modal-close:hover { background: var(--surface2); color: var(--text); }
     img.expandable { cursor: zoom-in; }
 
-    footer { text-align: center; padding: 2rem 5%; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
-    footer .brand { color: var(--secondary); }
+    /* FLOATING WHATSAPP BUTTON */
+    .wa-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+    }
+
+    .wa-float__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      animation: waPulse 2.5s ease-in-out infinite;
+    }
+
+    .wa-float__btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.55);
+    }
+
+    @keyframes waPulse {
+      0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.3); }
+      50%      { box-shadow: 0 4px 20px rgba(37,211,102,0.4), 0 0 0 10px rgba(37,211,102,0); }
+    }
+
+    .wa-float__tooltip {
+      position: absolute;
+      right: calc(100% + 12px);
+      top: 50%;
+      transform: translateY(-50%);
+      background: #161b22;
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #e6e6e6;
+      font-size: 0.78rem;
+      font-weight: 500;
+      white-space: nowrap;
+      padding: 6px 12px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    .wa-float__tooltip::after {
+      content: '';
+      position: absolute;
+      top: 50%; right: -5px;
+      transform: translateY(-50%);
+      border: 5px solid transparent;
+      border-right: none;
+      border-left-color: rgba(255,255,255,0.08);
+    }
+
+    .wa-float__btn:hover .wa-float__tooltip { opacity: 1; }
+
+    @media (max-width: 600px) {
+      .wa-float { bottom: 1.25rem; right: 1.25rem; }
+      .wa-float__btn { width: 50px; height: 50px; }
+      .wa-float__tooltip { display: none; }
+    }
+
+    /* FOOTER --------------------------------------------------- */
+
+    .site-footer {
+      background: #080c14;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 4rem 5% 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #007bff, #00c2ff, transparent);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* Brand */
+    .footer-logo {
+      display: block;
+      font-family: 'Syne', 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #007bff;
+      letter-spacing: 2px;
+      text-decoration: none;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      color: #8b949e;
+      line-height: 1.75;
+      max-width: 280px;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-socials a {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: center;
+      color: #8b949e;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .footer-socials a:hover {
+      background: rgba(0,123,255,0.1);
+      border-color: rgba(0,123,255,0.25);
+      color: #00c2ff;
+    }
+
+    /* Nav columns */
+    .footer-nav h4 {
+      font-family: 'Syne', 'Poppins', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #e6e6e6;
+      margin-bottom: 1.1rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .footer-nav a {
+      font-size: 0.875rem;
+      color: #8b949e;
+      text-decoration: none;
+      padding: 0.3rem 0;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: #e6e6e6; }
+
+    /* CTA column */
+    .footer-cta h4 {
+      font-family: 'Syne', 'Poppins', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #e6e6e6;
+      margin-bottom: 0.5rem;
+    }
+    .footer-cta p {
+      font-size: 0.85rem;
+      color: #8b949e;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .footer-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: linear-gradient(90deg, #007bff, #0059c2);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.65rem 1.3rem;
+      border-radius: 100px;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 16px rgba(0,123,255,0.25);
+      margin-bottom: 0.65rem;
+    }
+    .footer-cta-btn:hover { opacity: 0.9; transform: translateY(-2px); color: #fff; }
+
+    .footer-resume-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #8b949e;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-resume-link:hover { color: #00c2ff; }
+
+    /* Bottom bar */
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.4rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: #8b949e;
+    }
+
+    .footer-brand-name { color: #00c2ff; }
+    .footer-bottom strong { color: #e6e6e6; }
+    .footer-tagline { color: #8b949e; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 560px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -340,16 +611,43 @@
         </div>
       </div>
 
-      <div class="project-card project-card--soon">
+       <!-- PROJECT 11: Lady Globe Global -->
+      <div class="project-card" data-category="web brand landing">
+        <div class="project-card__img">
+          <img src="img/ladtg.png" alt="Lady Globe Global Ltd" class="expandable">
+        </div>
+        <div class="project-card__body">
+          <div class="project-meta">
+            <span class="project-number">11</span>
+            <span class="project-tag tag--web">Web Dev</span>
+            <span class="project-tag tag--brand">Branding</span>
+          </div>
+          <h3>Lady Globe Global Ltd</h3>
+          <p>A full multi-division corporate site for Nigeria's most versatile business group — spanning construction, fashion, trade & imports, and strategic consulting. Clean, professional, and built to convert.</p>
+          <div class="project-card__footer">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <span class="project-tag tag--web" style="font-size:0.68rem;">HTML</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">CSS</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">JS</span>
+            </div>
+            <a href="https://ladygloba.netlify.app/" target="_blank" class="project-card__link">
+              View Live <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+       <!-- ── <div class="project-card project-card--soon">
         <div class="soon-inner">
           <div class="soon-icon"><i class="fa-solid fa-code"></i></div>
           <h3>Next Project</h3>
           <p>Something new is in the pipeline. Check back soon.</p>
         </div>
       </div>
-    </div>
+    </div>  ── -->
 
-    <!-- ── 11: EminnTech Portfolio (FEATURED) ── -->
+    <!-- ── 12: EminnTech Portfolio (FEATURED) ── -->
     <div class="project-featured" data-category="web design" style="margin-bottom:1.5rem;">
       <div class="project-featured__img">
         <img src="img/3rd  Project.png" alt="EminnTech Portfolio" class="expandable">
@@ -357,7 +655,7 @@
       </div>
       <div class="project-featured__content">
         <div class="project-meta">
-          <span class="project-number">11</span>
+          <span class="project-number">12</span>
           <span class="project-tag tag--web">Web Dev</span>
           <span class="project-tag tag--design">Design</span>
         </div>
@@ -386,9 +684,73 @@
 
   </div>
 
-  <footer>
-    <p>© 2025 <strong>EminnTech</strong> | Powered by <span class="brand">Nexua</span></p>
-  </footer>
+  <!-- WhatsApp Float -->
+    <div class="wa-float" id="waFloat">
+      <a href="https://wa.me/message/QVGHYLTLOJNAE1" target="_blank" class="wa-float__btn" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white" width="26" height="26">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="wa-float__tooltip">Chat on WhatsApp</span>
+      </a>
+    </div>
+
+  <footer class="site-footer">
+      <div class="footer-inner">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">EMINNTECH</a>
+          <p>Building websites, AI tools, and digital experiences that help businesses grow online. Based in Nigeria, serving clients globally.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/message/QVGHYLTLOJNAE1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/eminn_tech/?__pwa=1#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/emmajosh-/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Emmanue0108" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://github.com/EMJO01" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.tiktok.com/@daylight.366" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Nav column -->
+        <div class="footer-nav">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="work.html">Projects</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#Contact">Contact</a>
+        </div>
+
+        <!-- Services column -->
+        <div class="footer-nav">
+          <h4>Services</h4>
+          <a href="getstarted.html">Website Development</a>
+          <a href="getstarted.html">Web Hosting & Setup</a>
+          <a href="getstarted.html">Graphics Design</a>
+          <a href="getstarted.html">WhatsApp AI Bot</a>
+          <a href="getstarted.html">Custom Projects</a>
+        </div>
+
+        <!-- CTA column -->
+        <div class="footer-cta">
+          <h4>Ready to build?</h4>
+          <p>Got a project in mind? Let's talk about it.</p>
+          <a href="getstarted.html" class="footer-cta-btn">
+            <i class="fa-solid fa-bolt"></i> Start a Project
+          </a>
+          <a href="https://eminntech.com/resume/my%20resume%20(2).pdf" target="_blank" class="footer-resume-link">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>© 2026 <strong>EminnTech</strong> | Powered by <span class="footer-brand-name">Nexua</span></p>
+        <p class="footer-tagline">Welcome To The Future 🚀</p>
+      </div>
+    </footer>
 
   <div class="modal-overlay" id="imgModal">
     <div class="modal-img-wrap">
