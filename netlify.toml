@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/work.html"
+  to = "/work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/getstarted.html"
+  to = "/getstarted"
+  status = 301
+  force = true
