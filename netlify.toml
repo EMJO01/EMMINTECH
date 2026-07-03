@@ -15,3 +15,9 @@
   to = "/getstarted"
   status = 301
   force = true
+
+[[redirects]]
+from = "/pricing.html"
+to = "/pricing"
+status = 301
+force = true
