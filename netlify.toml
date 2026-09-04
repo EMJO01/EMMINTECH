@@ -6,7 +6,7 @@
 
 [[redirects]]
   from = "/work.html"
-  to = "/work"
+  to = "/project"
   status = 301
   force = true
 
@@ -21,3 +21,27 @@ from = "/pricing.html"
 to = "/pricing"
 status = 301
 force = true
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog-website-cost-nigeria.html"
+  to = "/blog-website-cost-nigeria"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog-whatsapp-ai-bot-nigeria.html"
+  to = "/blog-whatsapp-ai-bot-nigeria"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog-5-stages-business-growth.html"
+  to = "/blog-5-stages-business-growth"
+  status = 301
+  force = true

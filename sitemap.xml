@@ -14,7 +14,7 @@
 
   <!-- Work / Portfolio -->
   <url>
-    <loc>https://eminntech.com/work</loc>
+    <loc>https://eminntech.com/project</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -48,6 +48,38 @@
   <url>
     <loc>https://eminntech.com/pricing</loc>
     <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://eminntech.com/blog</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: Website Cost Guide -->
+  <url>
+    <loc>https://eminntech.com/blog-website-cost-nigeria</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: WhatsApp AI Bot Guide -->
+  <url>
+    <loc>https://eminntech.com/blog-whatsapp-ai-bot-nigeria</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: 5 Stages of Business Growth -->
+  <url>
+    <loc>https://eminntech.com/blog-5-stages-business-growth</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

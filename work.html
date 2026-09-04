@@ -10,11 +10,11 @@
   <meta name="keywords" content="EminnTech portfolio, web development projects Nigeria, WhatsApp AI bot, landing page Nigeria, Emmanuel Joshua projects, Nexua work">
   <meta name="author" content="Emmanuel Joshua — EminnTech">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://eminntech.com/work">
+  <link rel="canonical" href="https://eminntech.com/project">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://eminntech.com/work">
+  <meta property="og:url" content="https://eminntech.com/project">
   <meta property="og:title" content="Projects & Portfolio | EminnTech — 11+ Live Projects">
   <meta property="og:description" content="Browse 11+ projects — landing pages, business websites, WhatsApp AI bots, and brand identities built for clients in Nigeria and globally.">
   <meta property="og:image" content="https://eminntech.com/img/og-image.png">
@@ -25,7 +25,7 @@
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://eminntech.com/work">
+  <meta name="twitter:url" content="https://eminntech.com/project">
   <meta name="twitter:title" content="Projects & Portfolio | EminnTech — 11+ Live Projects">
   <meta name="twitter:description" content="Browse 11+ projects — landing pages, business websites, WhatsApp AI bots, and brand identities built for clients in Nigeria and globally.">
   <meta name="twitter:image" content="https://eminntech.com/img/og-image.png">
@@ -131,6 +131,9 @@
     .project-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; display: flex; flex-direction: column; }
     .project-card:hover { border-color: rgba(0,123,255,0.3); box-shadow: 0 16px 40px rgba(0,0,0,0.35); transform: translateY(-4px); }
     .project-card__img { position: relative; height: 220px; overflow: hidden; background: var(--surface2); }
+    .project-card__img--icon { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0,123,255,0.14), rgba(0,194,255,0.08)); }
+    .project-card__img--icon i { font-size: 2.6rem; color: rgba(0,194,255,0.55); }
+    .project-card__img--icon span { position: absolute; bottom: 12px; left: 14px; font-size: 0.68rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted); font-weight: 600; }
     .project-card__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform 0.5s ease; }
     .project-card:hover .project-card__img img { transform: scale(1.05); }
     .project-card__body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1; }
@@ -638,6 +641,75 @@
       </div>
     </div>
 
+    <!-- ── ROW 6: CodeAlpha Full Stack Internship Tasks ── -->
+    <div class="projects-grid-row">
+      <!-- PROJECT 13: NEXUA — Task 1 -->
+      <div class="project-card" data-category="web">
+        <div class="project-card__img"><img src="img/task1-nexua-ecommerce.svg" alt="NEXUA E-Commerce Platform"></div>
+        <div class="project-card__body">
+          <div class="project-meta">
+            <span class="project-number">13</span>
+            <span class="project-tag tag--web">Web Dev</span>
+          </div>
+          <h3>NEXUA — E-Commerce Platform</h3>
+          <p>A complete e-commerce platform built from scratch for my Full Stack Development internship at CodeAlpha — product catalog, cart, and checkout flow on a full Node.js backend.</p>
+          <div class="project-card__footer">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <span class="project-tag tag--web" style="font-size:0.68rem;">Node.js</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">PostgreSQL</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">React</span>
+            </div>
+            <!-- TODO: swap in the exact repo URL, e.g. https://github.com/EMJO01/nexua -->
+            <a href="https://github.com/EMJO01" target="_blank" class="project-card__link">View Code <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 14: NEXUA Connect — Task 2 -->
+      <div class="project-card" data-category="web">
+        <div class="project-card__img"><img src="img/task2-nexua-connect.svg" alt="NEXUA Connect Social Platform"></div>
+        <div class="project-card__body">
+          <div class="project-meta">
+            <span class="project-number">14</span>
+            <span class="project-tag tag--web">Web Dev</span>
+          </div>
+          <h3>NEXUA Connect — Social Media Platform</h3>
+          <p>Full social platform backend built for CodeAlpha Task 2 — 5-table PostgreSQL schema with a self-referential follower graph, an efficient joined feed query (posts/likes/comments), and composite keys preventing duplicate interactions at the database level.</p>
+          <div class="project-card__footer">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <span class="project-tag tag--web" style="font-size:0.68rem;">Node.js</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">PostgreSQL</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">REST API</span>
+            </div>
+            <!-- TODO: swap in the exact repo URL, e.g. https://github.com/EMJO01/nexua-connect -->
+            <a href="https://github.com/EMJO01" target="_blank" class="project-card__link">View Code <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="projects-grid-row">
+      <!-- PROJECT 15: CodeAlpha Task 3 — Project Management Tool -->
+      <div class="project-card" data-category="web">
+        <div class="project-card__img"><img src="img/task3-project-management.svg" alt="Project Management Tool"></div>
+        <div class="project-card__body">
+          <div class="project-meta">
+            <span class="project-number">15</span>
+            <span class="project-tag tag--web">Web Dev</span>
+          </div>
+          <h3>Project Management Tool</h3>
+          <p>Task 3 of my Full Stack Development internship at CodeAlpha — a project management tool with task boards, assignments, and progress tracking.</p>
+          <div class="project-card__footer">
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <span class="project-tag tag--web" style="font-size:0.68rem;">Node.js</span>
+              <span class="project-tag tag--web" style="font-size:0.68rem;">PostgreSQL</span>
+            </div>
+            <a href="https://github.com/EMJO01/CodeAlpha_NEXUA" target="_blank" class="project-card__link">View Code <i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
        <!-- ── <div class="project-card project-card--soon">
         <div class="soon-inner">
           <div class="soon-icon"><i class="fa-solid fa-code"></i></div>
@@ -655,7 +727,7 @@
       </div>
       <div class="project-featured__content">
         <div class="project-meta">
-          <span class="project-number">12</span>
+          <span class="project-number">16</span>
           <span class="project-tag tag--web">Web Dev</span>
           <span class="project-tag tag--design">Design</span>
         </div>
@@ -686,7 +758,7 @@
 
   <!-- WhatsApp Float -->
     <div class="wa-float" id="waFloat">
-      <a href="https://wa.me/message/QVGHYLTLOJNAE1" target="_blank" class="wa-float__btn" aria-label="Chat on WhatsApp">
+      <a href="https://wa.me/message/XRSE7YDQ3QISL1" target="_blank" class="wa-float__btn" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white" width="26" height="26">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
@@ -702,12 +774,12 @@
           <a href="index.html" class="footer-logo">EMINNTECH</a>
           <p>Building websites, AI tools, and digital experiences that help businesses grow online. Based in Nigeria, serving clients globally.</p>
           <div class="footer-socials">
-            <a href="https://wa.me/message/QVGHYLTLOJNAE1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/message/XRSE7YDQ3QISL1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/eminn_tech/?__pwa=1#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/emmajosh-/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://x.com/Emmanue0108" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
             <a href="https://github.com/EMJO01" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.tiktok.com/@daylight.366" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.tiktok.com/@emjo.exe" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
 
@@ -717,6 +789,7 @@
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="work.html">Projects</a>
+          <a href="blog.html">Blog</a>
           <a href="index.html#pricing">Pricing</a>
           <a href="index.html#Contact">Contact</a>
         </div>
