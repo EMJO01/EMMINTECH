@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Emmanuel Joshua | Full-Stack Developer — Node.js, React, PostgreSQL</title>
+  <meta name="description" content="Full-stack developer portfolio for Emmanuel Joshua — Node.js, Express, PostgreSQL, React, REST APIs. Live projects, CodeAlpha internship work, and GitHub links.">
+  <meta name="keywords" content="full stack developer Nigeria, software developer portfolio, Node.js developer, React developer Nigeria, Emmanuel Joshua developer, CodeAlpha internship">
+  <meta name="author" content="Emmanuel Joshua">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://eminntech.com/for-developers.html">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://eminntech.com/for-developers.html">
+  <meta property="og:title" content="Emmanuel Joshua | Full-Stack Developer">
+  <meta property="og:description" content="Node.js, Express, PostgreSQL, React, REST APIs. Live projects and GitHub links.">
+  <meta property="og:image" content="https://eminntech.com/img/og-image.png">
+  <meta property="og:site_name" content="EminnTech">
+  <meta property="og:locale" content="en_NG">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Emmanuel Joshua | Full-Stack Developer">
+  <meta name="twitter:description" content="Node.js, Express, PostgreSQL, React, REST APIs. Live projects and GitHub links.">
+  <meta name="twitter:creator" content="@Emmanue0108">
+
+  <link rel="icon" type="image/png" href="img/favicon (2).png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Emmanuel Joshua",
+      "jobTitle": "Full-Stack Developer",
+      "url": "https://eminntech.com/for-developers.html",
+      "sameAs": ["https://github.com/EMJO01", "https://www.linkedin.com/in/emmajosh-/"]
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #007bff; --secondary: #00c2ff; --bg: #0d1117; --surface: #161b22; --surface2: #1c2330;
+      --border: rgba(255,255,255,0.08); --text: #e6e6e6; --muted: #8b949e;
+      --display: 'Syne', sans-serif; --body: 'DM Sans', sans-serif; --mono: 'JetBrains Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--body); font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+
+    header { position: fixed; top: 0; width: 100%; z-index: 100; padding: 1.1rem 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(13,17,23,0.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .logo { font-family: var(--display); font-size: 1.2rem; font-weight: 800; color: var(--primary); letter-spacing: 2px; text-decoration: none; }
+    .header-right { display: flex; align-items: center; gap: 0.9rem; }
+    .toggle-back { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 100px; border: 1px solid var(--border); transition: color 0.2s, border-color 0.2s; }
+    .toggle-back:hover { color: var(--secondary); border-color: rgba(0,194,255,0.4); }
+    .resume-btn { display: inline-flex; align-items: center; gap: 7px; background: linear-gradient(90deg, var(--primary), #0059c2); color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 600; padding: 0.5rem 1.1rem; border-radius: 100px; white-space: nowrap; }
+
+    section { max-width: 920px; margin: 0 auto; padding: 0 5%; }
+
+    /* HERO */
+    .dev-hero { padding: 8.5rem 5% 3rem; max-width: 920px; margin: 0 auto; }
+    .dev-hero .eyebrow { font-family: var(--mono); font-size: 0.8rem; color: var(--secondary); letter-spacing: 1px; margin-bottom: 1rem; }
+    .dev-hero .eyebrow::before { content: '> '; color: var(--muted); }
+    .dev-hero h1 { font-family: var(--display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1rem; }
+    .dev-hero h1 span { background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .dev-hero p.lede { color: var(--muted); font-size: 1.02rem; max-width: 640px; line-height: 1.8; margin-bottom: 1.6rem; }
+    .dev-hero .status-pill { display: inline-flex; align-items: center; gap: 7px; font-size: 0.78rem; color: var(--muted); background: var(--surface); border: 1px solid var(--border); padding: 0.4rem 0.9rem; border-radius: 100px; margin-bottom: 1.6rem; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #28c840; box-shadow: 0 0 8px #28c840; }
+    .dev-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .btn-dev-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, var(--primary), #0059c2); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.75rem 1.5rem; border-radius: 10px; }
+    .btn-dev-ghost { display: inline-flex; align-items: center; gap: 8px; background: var(--surface); color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.75rem 1.5rem; border-radius: 10px; border: 1px solid var(--border); }
+    .btn-dev-ghost:hover { border-color: rgba(0,194,255,0.4); }
+
+    /* STACK */
+    .stack-section { padding: 2.5rem 5%; }
+    .stack-section h2, .proj-section h2, .exp-section h2 { font-family: var(--display); font-size: 1.3rem; font-weight: 700; margin-bottom: 1.3rem; display: flex; align-items: center; gap: 10px; }
+    .stack-section h2 i, .proj-section h2 i, .exp-section h2 i { color: var(--secondary); font-size: 1.1rem; }
+    .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .stack-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem 1.3rem; }
+    .stack-card h3 { font-family: var(--display); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary); margin-bottom: 0.8rem; }
+    .stack-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .stack-tag { font-family: var(--mono); font-size: 0.78rem; background: var(--surface2); color: var(--text); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border); }
+
+    /* PROJECTS */
+    .proj-section { padding: 2.5rem 5%; }
+    .proj-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem 1.6rem; margin-bottom: 1rem; }
+    .proj-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+    .proj-top h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 700; }
+    .proj-badge { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
+    .proj-badge.live { background: rgba(40,200,64,0.15); color: #28c840; border: 1px solid rgba(40,200,64,0.3); }
+    .proj-badge.shipped { background: rgba(0,194,255,0.12); color: var(--secondary); border: 1px solid rgba(0,194,255,0.3); }
+    .proj-card p { color: #d8dde3; font-size: 0.92rem; margin-bottom: 0.9rem; }
+    .proj-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+    .proj-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .proj-links a { display: inline-flex; align-items: center; gap: 6px; color: var(--secondary); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+    .proj-links a:hover { text-decoration: underline; }
+
+    /* EXPERIENCE */
+    .exp-section { padding: 2.5rem 5%; }
+    .exp-item { border-left: 2px solid var(--border); padding: 0 0 1.8rem 1.5rem; position: relative; }
+    .exp-item::before { content: ''; position: absolute; left: -6px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--secondary); }
+    .exp-item:last-child { padding-bottom: 0; }
+    .exp-item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 3px; }
+    .exp-item h3 { font-family: var(--display); font-size: 1rem; font-weight: 700; }
+    .exp-date { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+    .exp-org { font-size: 0.85rem; color: var(--secondary); margin-bottom: 0.6rem; }
+    .exp-item ul { margin: 0 0 0.6rem 1.1rem; color: #d8dde3; font-size: 0.88rem; }
+    .exp-item li { margin-bottom: 0.35rem; }
+    .exp-tech-line { font-family: var(--mono); font-size: 0.76rem; color: var(--muted); }
+
+    /* CONTACT / FOOTER */
+    .dev-footer { max-width: 920px; margin: 3rem auto 0; padding: 0 5% 4rem; }
+    .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 2.2rem 2rem; text-align: center; }
+    .contact-card h2 { font-family: var(--display); font-size: 1.4rem; margin-bottom: 0.6rem; }
+    .contact-card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1.4rem; }
+    .contact-row { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.4rem; font-size: 0.88rem; }
+    .contact-row a { color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+    .contact-row a:hover { color: var(--secondary); }
+    .footer-note { text-align: center; padding: 1.5rem 5%; color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
+    .footer-note a { color: var(--secondary); text-decoration: none; }
+
+    @media (max-width: 700px) {
+      .dev-hero { padding: 7rem 6% 2rem; }
+      .toggle-back span { display: none; }
+      section, .stack-section, .proj-section, .exp-section { padding-left: 6%; padding-right: 6%; }
+      .proj-top { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">EMINNTECH</a>
+    <div class="header-right">
+      <a href="index.html" class="toggle-back"><i class="fa-solid fa-arrow-left"></i> <span>For Businesses</span></a>
+      <a href="https://eminntech.com/resume/my%20resume%20(2).pdf" target="_blank" class="resume-btn"><i class="fa-solid fa-download"></i> Resume</a>
+    </div>
+  </header>
+
+  <div class="dev-hero">
+    <div class="status-pill"><span class="status-dot"></span> Open to full-time, internship & freelance roles</div>
+    <div class="eyebrow">emmanuel-joshua --role full-stack-developer</div>
+    <h1>Emmanuel Joshua<br><span>Full-Stack Developer</span></h1>
+    <p class="lede">Self-taught full-stack developer and AI automation builder based in Ibadan, Nigeria. Currently a Full-Stack Development Intern at CodeAlpha, and founder of EminnTech, shipping real products for real clients — including a live WhatsApp AI ordering system processing 40+ orders a day.</p>
+    <div class="dev-actions">
+      <a href="https://github.com/EMJO01" target="_blank" class="btn-dev-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/emmajosh-/" target="_blank" class="btn-dev-ghost"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:emmanueljoshuaaa08@gmail.com" class="btn-dev-ghost"><i class="fa-solid fa-envelope"></i> Email Me</a>
+    </div>
+  </div>
+
+  <div class="stack-section">
+    <h2><i class="fa-solid fa-layer-group"></i> Tech Stack</h2>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <h3>Frontend</h3>
+        <div class="stack-tags">
+          <span class="stack-tag">HTML5</span><span class="stack-tag">CSS3</span><span class="stack-tag">JavaScript</span><span class="stack-tag">React</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h3>Backend</h3>
+        <div class="stack-tags">
+          <span class="stack-tag">Node.js</span><span class="stack-tag">Express</span><span class="stack-tag">REST APIs</span><span class="stack-tag">Webhooks</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h3>Database</h3>
+        <div class="stack-tags">
+          <span class="stack-tag">PostgreSQL</span><span class="stack-tag">Supabase</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h3>AI & Automation</h3>
+        <div class="stack-tags">
+          <span class="stack-tag">Claude API</span><span class="stack-tag">Baileys</span><span class="stack-tag">n8n</span><span class="stack-tag">Prompt Engineering</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h3>Tools & DevOps</h3>
+        <div class="stack-tags">
+          <span class="stack-tag">Git</span><span class="stack-tag">GitHub</span><span class="stack-tag">Netlify</span><span class="stack-tag">Render</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <h3>Design & SEO</h3>
+        <div class="stack-tags">
+          <span class="stack-tag">Figma</span><span class="stack-tag">Canva</span><span class="stack-tag">Search Console</span><span class="stack-tag">SEMrush</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-section">
+    <h2><i class="fa-solid fa-code-branch"></i> Key Projects</h2>
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <h3>Rady Bot / OrderFlow — WhatsApp AI Ordering System</h3>
+        <span class="proj-badge live">🟢 Live · 40+ orders/day</span>
+      </div>
+      <p>AI-powered WhatsApp ordering system. Multi-vendor support, country selector, QR onboarding, vendor dashboard with auth, conversation memory, and intent detection — takes orders without manual intervention.</p>
+      <div class="proj-tech">
+        <span class="stack-tag">Node.js</span><span class="stack-tag">Express</span><span class="stack-tag">Supabase</span><span class="stack-tag">Claude API</span><span class="stack-tag">Baileys</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://eminnbot.netlify.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <h3>NEXUA — E-Commerce Platform <span style="color:var(--muted); font-weight:400; font-size:0.85rem;">(CodeAlpha Task 1)</span></h3>
+        <span class="proj-badge shipped">✅ Shipped</span>
+      </div>
+      <p>Complete e-commerce platform built from scratch for a Full Stack Development internship — product catalog, cart, and checkout flow on a full Node.js backend.</p>
+      <div class="proj-tech">
+        <span class="stack-tag">Node.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">React</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/EMJO01" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <h3>NEXUA Connect — Social Media Platform <span style="color:var(--muted); font-weight:400; font-size:0.85rem;">(CodeAlpha Task 2)</span></h3>
+        <span class="proj-badge shipped">✅ Shipped</span>
+      </div>
+      <p>Full social platform backend — 5-table PostgreSQL schema with a self-referential follower graph, an efficient joined feed query (posts/likes/comments), and composite keys preventing duplicate interactions at the database level, eliminating N+1 query problems.</p>
+      <div class="proj-tech">
+        <span class="stack-tag">Node.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">React</span><span class="stack-tag">REST APIs</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/EMJO01" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <h3>Project Management Tool <span style="color:var(--muted); font-weight:400; font-size:0.85rem;">(CodeAlpha Task 3)</span></h3>
+        <span class="proj-badge shipped">✅ Shipped</span>
+      </div>
+      <p>Task boards, assignments, and progress tracking, built as the third task of the CodeAlpha Full Stack Development internship.</p>
+      <div class="proj-tech">
+        <span class="stack-tag">Node.js</span><span class="stack-tag">PostgreSQL</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/EMJO01/CodeAlpha_NEXUA" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top">
+        <h3>EminnTech Portfolio — eminntech.com</h3>
+        <span class="proj-badge live">✅ Live</span>
+      </div>
+      <p>Multi-page business site with 15+ projects showcased, scroll-reveal animations, auto-advancing testimonials, Netlify forms, structured data, and a full SEO/content setup including a blog with FAQ schema.</p>
+      <div class="proj-tech">
+        <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span><span class="stack-tag">Netlify</span>
+      </div>
+      <div class="proj-links">
+        <a href="index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Site</a>
+        <a href="work.html"><i class="fa-solid fa-images"></i> See All Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-section">
+    <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-item-head">
+        <h3>Full Stack Development Intern — CodeAlpha</h3>
+        <span class="exp-date">Jun 2026 – Present</span>
+      </div>
+      <div class="exp-org">Remote · Internship</div>
+      <ul>
+        <li>Built NEXUA, a complete e-commerce platform, and NEXUA Connect, a social media platform with advanced PostgreSQL backend architecture</li>
+        <li>Designed a 5-table schema with a self-referential many-to-many follower graph and composite primary keys</li>
+        <li>Wrote an efficient join query combining posts, likes, and comments — eliminating N+1 database problems</li>
+        <li>Applied database-level constraint design to prevent duplicate interactions and enforce data integrity</li>
+      </ul>
+      <div class="exp-tech-line">Node.js · PostgreSQL · React · Supabase · REST APIs</div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-item-head">
+        <h3>Founder & Lead Developer — EminnTech / Nexua</h3>
+        <span class="exp-date">Jan 2023 – Present</span>
+      </div>
+      <div class="exp-org">Ibadan, Nigeria · Freelance</div>
+      <ul>
+        <li>Build websites, WhatsApp AI bots, and automation tools for Nigerian SMEs and international clients</li>
+        <li>Built and deployed Rady Bot — an AI WhatsApp ordering system processing 40+ orders/day for a live food vendor</li>
+        <li>Designed and developed client websites for fragrance and food brands in Lagos and Ibadan</li>
+        <li>Built a multi-page portfolio site with 15+ live projects, SEO integration, and structured content</li>
+      </ul>
+      <div class="exp-tech-line">Node.js · Supabase · Claude AI · Baileys · HTML/CSS/JS · Netlify · Render · n8n</div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-item-head">
+        <h3>Volunteer IT Assistant — Wisdom Way College</h3>
+        <span class="exp-date">Jun 2023 – Aug 2023</span>
+      </div>
+      <ul>
+        <li>Provided technical support for staff and visitors, troubleshooting software and hardware issues</li>
+        <li>Set up and maintained computer systems and networks</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dev-footer">
+    <div class="contact-card">
+      <h2>Let's talk</h2>
+      <p>Open to full-time roles, internships, freelance work, and collaborations.</p>
+      <div class="contact-row">
+        <a href="mailto:emmanueljoshuaaa08@gmail.com"><i class="fa-solid fa-envelope"></i> emmanueljoshuaaa08@gmail.com</a>
+        <a href="tel:+2348078377022"><i class="fa-solid fa-phone"></i> +234 807 837 7022</a>
+        <a href="https://github.com/EMJO01" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/emmajosh-/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
+      <a href="https://eminntech.com/resume/my%20resume%20(2).pdf" target="_blank" class="btn-dev-primary"><i class="fa-solid fa-download"></i> Download Full Resume</a>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Looking for a growth partner for your business instead? <a href="index.html">See the EminnTech site →</a>
+  </div>
+
+</body>
+</html>

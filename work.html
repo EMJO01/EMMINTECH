@@ -10,11 +10,11 @@
   <meta name="keywords" content="EminnTech portfolio, web development projects Nigeria, WhatsApp AI bot, landing page Nigeria, Emmanuel Joshua projects, Nexua work">
   <meta name="author" content="Emmanuel Joshua — EminnTech">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://eminntech.com/project">
+  <link rel="canonical" href="https://eminntech.com/work">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://eminntech.com/project">
+  <meta property="og:url" content="https://eminntech.com/work">
   <meta property="og:title" content="Projects & Portfolio | EminnTech — 11+ Live Projects">
   <meta property="og:description" content="Browse 11+ projects — landing pages, business websites, WhatsApp AI bots, and brand identities built for clients in Nigeria and globally.">
   <meta property="og:image" content="https://eminntech.com/img/og-image.png">
@@ -25,7 +25,7 @@
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://eminntech.com/project">
+  <meta name="twitter:url" content="https://eminntech.com/work">
   <meta name="twitter:title" content="Projects & Portfolio | EminnTech — 11+ Live Projects">
   <meta name="twitter:description" content="Browse 11+ projects — landing pages, business websites, WhatsApp AI bots, and brand identities built for clients in Nigeria and globally.">
   <meta name="twitter:image" content="https://eminntech.com/img/og-image.png">
@@ -455,7 +455,196 @@
     <button class="filter-btn" data-filter="ai">AI & Automation</button>
   </div>
 
+  <!-- ══════════════════════════════════════════
+       FEATURED CASE STUDIES — problem → diagnosis → solution → result
+  ══════════════════════════════════════════ -->
+  <style>
+    .case-section { max-width: 1100px; margin: 0 auto; padding: 1rem 5% 3.5rem; }
+    .case-head { margin-bottom: 2rem; }
+    .case-head .page-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; letter-spacing: 2.5px; text-transform: uppercase; color: #00c2ff; margin-bottom: 0.8rem; }
+    .case-head .page-eyebrow span { width: 24px; height: 1px; background: #00c2ff; }
+    .case-head h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 0.6rem; }
+    .case-head p { color: #8b949e; max-width: 560px; font-size: 0.95rem; line-height: 1.7; }
+
+    .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .case-card { background: #161b22; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 1.75rem 1.75rem 1.5rem; display: flex; flex-direction: column; }
+    .case-card--full { grid-column: 1 / -1; }
+    .case-card__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+    .case-card__top h3 { font-family: 'Syne', sans-serif; font-size: 1.25rem; font-weight: 700; }
+    .case-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .case-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; background: rgba(0,123,255,0.12); color: #00c2ff; border: 1px solid rgba(0,194,255,0.25); white-space: nowrap; }
+
+    .case-row { padding: 0.7rem 0; border-top: 1px solid rgba(255,255,255,0.06); }
+    .case-row:first-of-type { border-top: none; padding-top: 0; }
+    .case-label { display: block; font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #00c2ff; margin-bottom: 0.35rem; }
+    .case-row p { font-size: 0.9rem; color: #d8dde3; line-height: 1.7; }
+    .case-row p em.case-todo { color: #8b949e; font-style: italic; }
+
+    .case-quote { background: rgba(0,123,255,0.06); border-left: 3px solid #00c2ff; border-radius: 0 12px 12px 0; padding: 1rem 1.2rem; margin: 0.3rem 0; font-size: 0.92rem; font-style: italic; color: #e6e6e6; line-height: 1.7; }
+    .case-quote cite { display: block; margin-top: 0.6rem; font-style: normal; font-size: 0.78rem; color: #8b949e; }
+
+    .case-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.3rem; }
+    .case-stack span { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; background: #1c2330; color: #e6e6e6; padding: 3px 9px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.08); }
+
+    @media (max-width: 800px) {
+      .case-grid { grid-template-columns: 1fr; }
+      .case-card { padding: 1.5rem 1.4rem; }
+    }
+  </style>
+
+  <div class="case-section">
+    <div class="case-head">
+      <div class="page-eyebrow"><span></span> How I Work</div>
+      <h2>Featured case studies</h2>
+      <p>A closer look at the problem behind a few of these projects — not just what was built, but why.</p>
+    </div>
+
+    <div class="case-grid">
+
+      <!-- RADY BUSINESS — full case study -->
+      <div class="case-card case-card--full">
+        <div class="case-card__top">
+          <h3>Rady Business</h3>
+          <div class="case-tags"><span class="case-tag">Social Strategy</span><span class="case-tag">SEO Audit</span><span class="case-tag">WhatsApp AI Bot</span></div>
+        </div>
+
+        <div class="case-row">
+          <span class="case-label">Business</span>
+          <p>A print-on-demand apparel brand — hoodies, crewnecks, tees, and mugs — organized into distinct product lines: Heritage/Viking-themed pieces, Motorsport designs (German Racing), a German Lifestyle collection, a State Pride series (Arkansas, Alaska, Arizona and more), and an emerging African Heritage line. Sold worldwide through radybusiness.com, targeting niche cultural and identity-based communities rather than broad fashion audiences.</p>
+        </div>
+
+        <div class="case-row">
+          <span class="case-label">Problem</span>
+          <p>A real product catalog with real demand, but nobody managing it professionally — orders were handled entirely by hand over WhatsApp, and the brand's online presence wasn't built to be found or trusted.</p>
+        </div>
+
+        <div class="case-row">
+          <span class="case-label">Diagnosis</span>
+          <p>Social media was being run from a personal Facebook profile, not a business Page — no analytics access, no CTA button, no professional setup at all. There was no tracking of any kind before this. The site itself had unresolved issues underneath the marketing work: a duplicate product-variant display bug, zero Google search visibility for the brand name, inconsistent footer/copyright info, and no indexed About or Contact content. Content was being posted with no real strategy — no content pillars, no structure by product line.</p>
+        </div>
+
+        <div class="case-row">
+          <span class="case-label">Solution</span>
+          <p>Migrated the brand to a proper Facebook Business Page and connected Meta Business Suite, then Supermetrics, then Metricool for real analytics. Fixed the variant display bug and the site's SEO/indexing gaps, and rebuilt the content strategy around the actual product lines instead of ad-hoc posts. Then layered a WhatsApp AI ordering bot on top, so customers could browse what's available and place an order without a human replying to every message.</p>
+        </div>
+
+        <div class="case-row">
+          <span class="case-label">Result</span>
+          <div class="case-quote">
+            "Since adding this WhatsApp ordering bot, taking orders has gotten so much easier. Customers message, get an instant reply, browse what's available, and place their order, all without me having to reply to every single message myself. It feels like having extra hands on deck."
+            <cite>— Rady Business</cite>
+          </div>
+        </div>
+
+        <div class="case-row">
+          <span class="case-label">Stack</span>
+          <div class="case-stack">
+            <span>Meta Business Suite</span><span>Supermetrics</span><span>Metricool</span><span>Node.js</span><span>Claude API</span><span>Baileys</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASTA EXPRESS -->
+      <div class="case-card">
+        <div class="case-card__top">
+          <h3>Pasta Express</h3>
+          <div class="case-tags"><span class="case-tag">Landing Page</span></div>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Business</span>
+          <p>A food vendor serving ready-to-order pasta meals.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Problem</span>
+          <p>No dedicated web presence — the menu and how to order lived only in scattered social posts and word of mouth.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Solution</span>
+          <p>A clean, appetizing, mobile-first landing page built to showcase the menu and make ordering an obvious next step.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Result</span>
+          <div class="case-quote">
+            "The new landing page has completely transformed our online presence. Customers can now easily find us and place orders, leading to a significant increase in sales."
+            <cite>— Pasta Express</cite>
+          </div>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Stack</span>
+          <div class="case-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>Netlify</span></div>
+        </div>
+      </div>
+
+      <!-- STARR FRUITTI -->
+      <div class="case-card">
+        <div class="case-card__top">
+          <h3>Starr Fruitti</h3>
+          <div class="case-tags"><span class="case-tag">Landing Page</span></div>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Business</span>
+          <p>A fruit store brand.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Problem</span>
+          <p>No existing site to build on — needed a way to present products and let customers browse and reach out.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Solution</span>
+          <p>A vibrant, conversion-focused landing page built around the brand's energy, optimized for both mobile and desktop.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Result</span>
+          <div class="case-quote">
+            "The new landing page has completely transformed our online presence. Customers can now easily find us and place orders, leading to a significant increase in sales."
+            <cite>— Starr Fruitti</cite>
+          </div>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Stack</span>
+          <div class="case-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </div>
+      </div>
+
+      <!-- THE BROTHER COLLECTION -->
+      <div class="case-card">
+        <div class="case-card__top">
+          <h3>The Brother Collection</h3>
+          <div class="case-tags"><span class="case-tag">Branding</span><span class="case-tag">Web Dev</span></div>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Business</span>
+          <p>A lifestyle, music and fashion brand blending streetwear with music culture.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Problem</span>
+          <p>Needed one place to bring together the storefront, music, and fashion lookbook under a single, coherent brand experience.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Solution</span>
+          <p>A site balancing cultural energy with a clean, modern layout — store front, music section, and fashion lookbook in one build.</p>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Result</span>
+          <div class="case-quote">
+            "The new site has elevated our brand presence and provided a seamless experience for our customers. It's now easier than ever to explore our collections and engage with our music."
+            <cite>— The Brother Collection</cite>
+          </div>
+        </div>
+        <div class="case-row">
+          <span class="case-label">Stack</span>
+          <div class="case-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <div class="projects-wrap">
+
+    <div style="max-width:1100px;margin:0 auto 1.5rem;padding:0 5%;">
+      <h2 style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:#e6e6e6;">All Projects</h2>
+    </div>
 
     <!-- ── 01: Starr Fruitti (FEATURED) ── -->
     <div class="project-featured" data-category="web landing">
@@ -645,7 +834,10 @@
     <div class="projects-grid-row">
       <!-- PROJECT 13: NEXUA — Task 1 -->
       <div class="project-card" data-category="web">
-        <div class="project-card__img"><img src="img/task1-nexua-ecommerce.svg" alt="NEXUA E-Commerce Platform"></div>
+        <div class="project-card__img"><img src="img/task1-nexua-ecommerce.svg" alt="NEXUA E-Commerce Platform">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>CodeAlpha · Task 1</span>
+        </div>
         <div class="project-card__body">
           <div class="project-meta">
             <span class="project-number">13</span>
@@ -667,7 +859,10 @@
 
       <!-- PROJECT 14: NEXUA Connect — Task 2 -->
       <div class="project-card" data-category="web">
-        <div class="project-card__img"><img src="img/task2-nexua-connect.svg" alt="NEXUA Connect Social Platform"></div>
+        <div class="project-card__img"><img src="img/task2-nexua-connect.svg" alt="NEXUA Connect Social Platform">
+          <i class="fa-solid fa-users"></i>
+          <span>CodeAlpha · Task 2</span>
+        </div>
         <div class="project-card__body">
           <div class="project-meta">
             <span class="project-number">14</span>

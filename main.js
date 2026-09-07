@@ -137,6 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ============================================================
   (function() {
     const roles = [
+      "Business Growth Strategist",
       "Web Developer",
       "Tech Innovator",
       "Financial Analyst",

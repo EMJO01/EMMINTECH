@@ -6,7 +6,7 @@
 
 [[redirects]]
   from = "/work.html"
-  to = "/project"
+  to = "/work"
   status = 301
   force = true
 
@@ -43,5 +43,11 @@ force = true
 [[redirects]]
   from = "/blog-5-stages-business-growth.html"
   to = "/blog-5-stages-business-growth"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-developers.html"
+  to = "/for-developers"
   status = 301
   force = true

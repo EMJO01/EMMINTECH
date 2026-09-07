@@ -97,8 +97,28 @@
     opacity: 0.9;
     transform: translateY(-1px);
     box-shadow: 0 4px 20px rgba(0,123,255,0.4);
-    color: #fff;
+    color: #fff;  }
+
+  .header-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.42rem 0.9rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.12);
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
   }
+  .header-toggle:hover {
+    color: #00c2ff;
+    border-color: rgba(0,194,255,0.4);
+  }
+  @media (max-width: 900px) { .header-toggle { display: none; } }
 
   /* Hamburger */
   .hamburger {
@@ -1606,7 +1626,7 @@
       .tcard__role { font-size: 0.76rem; color: #8b949e; display: flex; align-items: center; gap: 5px; }
       .tcard__role i { color: #25D366; }
       .tcard__stars { display: flex; gap: 2px; color: #ffb400; font-size: 0.78rem; flex-shrink: 0; margin-top: 3px; }
-      .tcard__quote { font-size: 0.98rem; line-height: 1.75; color: #e6e6e6; margin-bottom: 1.35rem; position: relative; z-index: 1; white-space: pre-line; }
+      .tcard__quote { font-size: 0.98rem; line-height: 1.75; color: #e6e6e6; margin-bottom: 1.35rem; position: relative; z-index: 1; }
       .tcard__footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
       .tcard__service { font-size: 0.7rem; letter-spacing: 0.4px; text-transform: uppercase; color: #00c2ff; font-weight: 600; }
       .tcard__proof { display: flex; align-items: center; gap: 7px; }

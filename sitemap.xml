@@ -14,7 +14,7 @@
 
   <!-- Work / Portfolio -->
   <url>
-    <loc>https://eminntech.com/project</loc>
+    <loc>https://eminntech.com/work</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -82,6 +82,14 @@
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- For Developers (recruiter-facing) -->
+  <url>
+    <loc>https://eminntech.com/for-developers</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
