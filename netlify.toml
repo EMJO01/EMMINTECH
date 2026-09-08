@@ -47,7 +47,13 @@ force = true
   force = true
 
 [[redirects]]
-  from = "/for-developers.html"
-  to = "/for-developers"
+  from = "/blog-how-to-get-business-on-google-nigeria.html"
+  to = "/blog-how-to-get-business-on-google-nigeria"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/web-developer-ibadan.html"
+  to = "/web-developer-ibadan"
   status = 301
   force = true

@@ -84,12 +84,20 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- For Developers (recruiter-facing) -->
+  <!-- Blog: How to Get Your Business on Google -->
   <url>
-    <loc>https://eminntech.com/for-developers</loc>
-    <lastmod>2026-09-06</lastmod>
+    <loc>https://eminntech.com/blog-how-to-get-business-on-google-nigeria</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Web Developer in Ibadan (service page) -->
+  <url>
+    <loc>https://eminntech.com/web-developer-ibadan</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
