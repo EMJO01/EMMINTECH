@@ -100,4 +100,12 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Case Study: OrderFlow WhatsApp AI -->
+  <url>
+    <loc>https://eminntech.com/work/orderflow-whatsapp-ai</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

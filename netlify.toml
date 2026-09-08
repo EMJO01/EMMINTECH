@@ -57,3 +57,9 @@ force = true
   to = "/web-developer-ibadan"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/work-orderflow-whatsapp-ai.html"
+  to = "/work/orderflow-whatsapp-ai"
+  status = 301
+  force = true
