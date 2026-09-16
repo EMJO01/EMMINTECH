@@ -140,6 +140,8 @@
       <p>A production WhatsApp AI bot isn't a chatbot toy — it's a small piece of real infrastructure. In practice that means a backend (Node.js/Express is a common, reliable choice), a database to track vendors, products, and orders (Supabase/PostgreSQL works well here), a WhatsApp connection layer (libraries like Baileys), and an AI layer for understanding what the customer actually wants (an LLM API such as Claude). Hosting is typically split — Netlify for anything static, Render or a similar host for the always-on backend process.</p>
 
       <p>For a multi-vendor setup, you also need country/region selection, QR-code onboarding for new vendors, and a dashboard where a vendor can log in and see their own orders — otherwise it's just one bot for one business, not a platform.</p>
+      <p>I built <strong>OrderFlow</strong> to put this into practice — it's live and handling real orders daily.
+      <a href="work-orderflow-whatsapp-ai.html">See the OrderFlow case study →</a></p>
 
       <h2>Where it actually pays off</h2>
 

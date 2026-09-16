@@ -86,6 +86,27 @@
         .bundle-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 4px; }
         .bundle-name { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 4px; }
         .bundle-includes { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+        .card .case-study-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #2dd4e8; /* same teal as the price / badge */
+            text-decoration: none;
+            border-bottom: 1px solid rgba(45, 212, 232, 0.35);
+            transition: border-color 0.15s ease, color 0.15s ease;
+            }
+
+            .card .case-study-link:hover {
+            color: #7de9f4;
+            border-color: #7de9f4;
+            }
+
+            .card .case-study-link:visited {
+            color: #2dd4e8;
+            }
         .bundle-pricing { text-align: right; flex-shrink: 0; }
         .bundle-old { font-size: 12px; color: var(--muted); text-decoration: line-through; margin-bottom: 2px; }
         .bundle-new { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--cyan); line-height: 1; }
@@ -200,6 +221,7 @@
                 <div class="card-delivery">5–7 days</div>
             </div>
             <div class="card-note">The Rady Bot model — proven and live</div>
+            <a href="work-orderflow-whatsapp-ai.html" class="case-study-link">See it in action: the OrderFlow case study →</a>
             </div>
             <div class="card">
             <div class="card-name">WhatsApp Order Bot (Advanced)</div>
