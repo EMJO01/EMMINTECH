@@ -63,3 +63,9 @@ force = true
   to = "/work/orderflow-whatsapp-ai"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blog-ecommerce-website-cost-nigeria.html"
+  to = "/blog-ecommerce-website-cost-nigeria"
+  status = 301
+  force = true
