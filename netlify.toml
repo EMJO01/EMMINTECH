@@ -69,3 +69,10 @@ force = true
   to = "/blog-ecommerce-website-cost-nigeria"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/visibility-audit.html"
+  to = "/visibility-audit"
+  status = 301
+  force = true
+
